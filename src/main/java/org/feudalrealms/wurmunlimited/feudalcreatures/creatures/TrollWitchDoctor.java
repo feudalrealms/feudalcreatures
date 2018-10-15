@@ -80,8 +80,20 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, SoundNames 
         builder.handDamString("whip");
         builder.handDamString("strike");
         builder.kickDamString("kick");
-
         builder.setCombatMoves(new int[]{CombatMove.STUN, CombatMove.DOUBLE_FIST});
+
+// SWEEP = 1 = " makes a circular powerful sweep!"
+// EARTHSHAKE = 2 = " shakes the earth!"
+// FIREBREATH = 3 =  " breathes fire!"
+// DOUBLE_FIST = 4 = " throws down @hisher powerful fists!"
+// STOMP = 5 = " stomps!",
+// THROW = 6 = " picks up and throws @defender!"
+// STUN = 7 = " stuns @defender!"
+// BASH = 8 = " bashes @defender!"
+// ACIDBREATH = 9 = " breathes acid!"
+// HELLHORSEFIRE = 10 = " breathes fire!"
+// PHASE = 11 =  " phases!"
+
         builder.maxPercentOfCreatures(0.04f);
         builder.itemsButchered(itemsButchered);
         builder.meatMaterial(ItemMaterials.MATERIAL_MEAT_HUMANOID);
