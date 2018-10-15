@@ -1,4 +1,4 @@
-package io.gts.wurmunlimited.feudalcreatures.creatures;
+package org.feudalrealms.wurmunlimited.feudalcreatures.creatures;
 
 import java.util.Map;
 

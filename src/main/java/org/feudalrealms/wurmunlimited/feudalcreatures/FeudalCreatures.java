@@ -1,6 +1,6 @@
-package io.gts.wurmunlimited.feudalcreatures;
+package org.feudalrealms.wurmunlimited.feudalcreatures;
 
-import io.gts.wurmunlimited.feudalcreatures.creatures.GoblinBrute;
+import org.feudalrealms.wurmunlimited.feudalcreatures.creatures.GoblinBrute;
 import org.gotti.wurmunlimited.modloader.interfaces.PreInitable;
 import org.gotti.wurmunlimited.modloader.interfaces.WurmServerMod;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreatures;
