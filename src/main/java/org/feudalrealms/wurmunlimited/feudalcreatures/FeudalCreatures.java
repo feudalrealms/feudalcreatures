@@ -1,6 +1,7 @@
 package org.feudalrealms.wurmunlimited.feudalcreatures;
 
 import org.feudalrealms.wurmunlimited.feudalcreatures.creatures.GoblinBrute;
+import org.feudalrealms.wurmunlimited.feudalcreatures.creatures.TrollWitchDoctor;
 import org.gotti.wurmunlimited.modloader.interfaces.PreInitable;
 import org.gotti.wurmunlimited.modloader.interfaces.WurmServerMod;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreatures;
@@ -17,5 +18,6 @@ public class FeudalCreatures implements WurmServerMod, PreInitable {
 
         ModCreatures.init();
         ModCreatures.addCreature(new GoblinBrute());
+        ModCreatures.addCreature(new TrollWitchDoctor());
     }
 }
