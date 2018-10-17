@@ -37,8 +37,8 @@ public class FeudalCreatures implements WurmServerMod, PreInitable, Initable {
     }
 
     private static void addNewCreatures () {
-        ModCreatures.addCreature(new GoblinBrute());
+//        ModCreatures.addCreature(new GoblinBrute());
         ModCreatures.addCreature(new TrollWitchDoctor());
-        ModCreatures.addCreature(new Rattlesnake());
+//        ModCreatures.addCreature(new Rattlesnake());
     }
 }

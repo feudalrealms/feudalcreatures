@@ -9,16 +9,19 @@ import com.wurmonline.server.creatures.CreatureTemplateFactory;
 import com.wurmonline.server.creatures.CreatureTemplateIds;
 import com.wurmonline.server.creatures.NoSuchCreatureTemplateException;
 import com.wurmonline.server.skills.Skill;
+import org.feudalrealms.wurmunlimited.feudalcreatures.FeudalCreatures;
 import org.gotti.wurmunlimited.modsupport.CreatureTemplateBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.EncounterBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreature;
 import com.wurmonline.shared.constants.CreatureTypes;
 import com.wurmonline.shared.constants.SoundNames;
 import static com.wurmonline.server.skills.SkillList.*;
+import java.util.logging.Logger;
 
 public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
     private int templateId;
     private Map<Integer, Skill> baseSkillTree;
+    private static final Logger LOGGER = Logger.getLogger(FeudalCreatures.class.getName());
 
     @Override
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
@@ -36,23 +39,23 @@ public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
         float ogStamina = this.baseSkillTree.get(BODY_STRENGTH).getNumber();
         float ogControl = this.baseSkillTree.get(BODY_CONTROL).getNumber();
 
-        CreatureTemplateBuilder buildero = new CreatureTemplateBuilder(
-                "mod.creature.goblinbrute",
-                "Goblin Brute",
-                "He wants you to sit on his lap.",
-                "model.creature.humanoid.goblin",
-                types,
-                (byte)0, (short)5, (byte)0, (short)360, (short)20, (short)35,
-                DEATH_MALE_SND, DEATH_FEMALE_SND, HIT_MALE_SND, HIT_FEMALE_SND,
-                1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F,
-                0.8F, 0, new int[0], 3, 0, (byte)80
-        );
+//        CreatureTemplateBuilder buildero = new CreatureTemplateBuilder(
+//                "mod.creature.goblinbrute",
+//                "Goblin Brute",
+//                "He wants you to sit on his lap.",
+//                "model.creature.humanoid.goblin",
+//                types,
+//                (byte)0, (short)5, (byte)0, (short)360, (short)20, (short)35,
+//                DEATH_MALE_SND, DEATH_FEMALE_SND, HIT_MALE_SND, HIT_FEMALE_SND,
+//                1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F,
+//                0.8F, 0, new int[0], 3, 0, (byte)80
+//        );
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder("mod.creature.goblinbrute") {
             @Override
             public CreatureTemplate build() {
                 try {
-                    return CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_LEADER_CID);
+                    return CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_CID);
                 } catch (NoSuchCreatureTemplateException e) {
                     throw new RuntimeException(e);
                 }
@@ -77,7 +80,7 @@ public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
         builder.maxGroupAttackSize(6);
         builder.hasHands(true);
         builder.maxPercentOfCreatures(0.02f);
-
+        LOGGER.info("FeudalCreatures: GoblinBrute");
         return builder;
     }
 
@@ -97,7 +100,7 @@ public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
 
     private void getBaseTemplate() {
         try {
-            CreatureTemplate baseTemplate = CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_LEADER_CID);
+            CreatureTemplate baseTemplate = CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_CID);
             this.baseSkillTree = baseTemplate.getSkills().getSkillTree();
         } catch (Exception e) {
             throw new RuntimeException(e);
