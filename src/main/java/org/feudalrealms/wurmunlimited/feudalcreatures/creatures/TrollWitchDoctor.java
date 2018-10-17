@@ -40,25 +40,37 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, SoundNames 
                 C_TYPE_HUNTING,
                 C_TYPE_CARNIVORE,
                 C_TYPE_NON_NEWBIE };
+
         final int[] itemsButchered = {leather, cookedMeat, farmersSalve, potion};
 
         float ogStrength = this.baseSkillTree.get(BODY_STRENGTH).getNumber();
         float ogStamina = this.baseSkillTree.get(BODY_STRENGTH).getNumber();
         float ogControl = this.baseSkillTree.get(BODY_CONTROL).getNumber();
 
+        CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
+                "mod.creature.trollwitchdoctor",
+                "Troll Witch Doctor",
+                "Dis wont hurt a bit...",
+                "model.creature.humanoid.troll.standard",
+                types,
+                (byte)0, (short)5, (byte)0, (short)360, (short)20, (short)35,
+                DEATH_TROLL_SND, DEATH_TROLL_SND, HIT_TROLL_SND, HIT_TROLL_SND,
+                1.0F, 2.0F, 0.0F, 0.0F, 0.0F, 0.0F,
+                0.8F, 0, new int[0], 3, 0, (byte)80
+        );
 
-        CreatureTemplateBuilder builder = new CreatureTemplateBuilder("mod.creature.trollwitchdoctor") {
-            @Override
-            public CreatureTemplate build() {
-                try {
-                    return CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.TROLL_CID);
-                } catch (NoSuchCreatureTemplateException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        };
+//        CreatureTemplateBuilder builder = new CreatureTemplateBuilder("mod.creature.trollwitchdoctor") {
+//            @Override
+//            public CreatureTemplate build() {
+//                try {
+//                    return CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.TROLL_CID);
+//                } catch (NoSuchCreatureTemplateException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//        };
 
-        builder.types(types);
+//        builder.types(types);
         builder.name("Troll Witch Doctor");
         builder.description("Dis wont hurt a bit...");
 
