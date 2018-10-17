@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="feudalcreatures:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/feudalcreatures_jar</output-path>
+    <root id="archive" name="feudalcreatures.jar">
+      <element id="module-output" name="feudalcreatures_main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.gotti.wurmunlimited/common/3127452/92540afaef1372700cebb3665bfca1b0dab656d1/common-3127452.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.gotti.wurmunlimited/server-modlauncher/0.40/f5fb25cfb9c26218b19122a0763078eab8057cb0/server-modlauncher-0.40.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.23.1-GA/c072c13dcb7f705471c40bafb1536171df850ab2/javassist-3.23.1-GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.gotti.wurmunlimited/server/3127452/5d149035b4d983141f45a6b916f19de60bf95e5e/server-3127452.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
