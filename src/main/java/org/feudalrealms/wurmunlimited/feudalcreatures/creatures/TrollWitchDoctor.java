@@ -12,11 +12,13 @@ import com.wurmonline.server.creatures.NoSuchCreatureTemplateException;
 import com.wurmonline.server.skills.Skill;
 import com.wurmonline.shared.constants.CreatureTypes;
 import com.wurmonline.shared.constants.SoundNames;
+import org.feudalrealms.wurmunlimited.feudalcreatures.FeudalCreatures;
 import org.gotti.wurmunlimited.modsupport.CreatureTemplateBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.EncounterBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreature;
 
 import java.util.Map;
+import java.util.logging.Logger;
 
 import static com.wurmonline.server.skills.SkillList.*;
 import static com.wurmonline.server.items.ItemList.*;
@@ -25,6 +27,7 @@ import static com.wurmonline.server.items.ItemList.*;
 public class TrollWitchDoctor implements ModCreature, CreatureTypes, SoundNames {
     private int templateId;
     private Map<Integer, Skill> baseSkillTree;
+    private static final Logger LOGGER = Logger.getLogger(FeudalCreatures.class.getName());
 
     @Override
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
@@ -44,7 +47,7 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, SoundNames 
         float ogControl = this.baseSkillTree.get(BODY_CONTROL).getNumber();
 
 
-        CreatureTemplateBuilder builder = new CreatureTemplateBuilder("mod.creature.troll.witchdoctor") {
+        CreatureTemplateBuilder builder = new CreatureTemplateBuilder("mod.creature.trollwitchdoctor") {
             @Override
             public CreatureTemplate build() {
                 try {
@@ -97,6 +100,8 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, SoundNames 
         builder.maxPercentOfCreatures(0.04f);
         builder.itemsButchered(itemsButchered);
         builder.meatMaterial(ItemMaterials.MATERIAL_MEAT_HUMANOID);
+
+        LOGGER.info("FeudalCreatures: Troll Witchdoctor");
         return builder;
     }
 
@@ -118,7 +123,7 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, SoundNames 
 
     private void getBaseTemplate() {
         try {
-            CreatureTemplate baseTemplate = CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_LEADER_CID);
+            CreatureTemplate baseTemplate = CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.TROLL_CID);
             this.baseSkillTree = baseTemplate.getSkills().getSkillTree();
         } catch (Exception e) {
             throw new RuntimeException(e);
