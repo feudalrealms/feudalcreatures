@@ -3,7 +3,6 @@ package org.feudalrealms.wurmunlimited.feudalcreatures.creatures;
 import com.wurmonline.mesh.Tiles;
 import com.wurmonline.server.combat.ArmourTemplate;
 import com.wurmonline.server.combat.CombatMove;
-import com.wurmonline.server.bodys.BodyTemplate;
 import com.wurmonline.server.bodys.Wound;
 import com.wurmonline.server.creatures.CreatureTemplate;
 import com.wurmonline.server.creatures.CreatureTemplateFactory;
