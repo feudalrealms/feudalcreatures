@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.gotti.wurmunlimited:server-modlauncher:0.40">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.gotti.wurmunlimited/server-modlauncher/0.40/f5fb25cfb9c26218b19122a0763078eab8057cb0/server-modlauncher-0.40.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.gotti.wurmunlimited/server-modlauncher/0.40/90b58b946f0c53089f6375a1e0a9e89bbf2bedc7/server-modlauncher-0.40-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
