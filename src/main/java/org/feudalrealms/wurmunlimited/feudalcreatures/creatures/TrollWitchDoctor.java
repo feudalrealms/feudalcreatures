@@ -1,6 +1,7 @@
 package org.feudalrealms.wurmunlimited.feudalcreatures.creatures;
 
 import com.wurmonline.mesh.Tiles;
+import com.wurmonline.server.bodys.BodyTemplate;
 import com.wurmonline.server.combat.ArmourTemplate;
 import com.wurmonline.server.combat.CombatMove;
 import com.wurmonline.server.bodys.Wound;
@@ -48,12 +49,12 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, SoundNames 
         float ogControl = this.baseSkillTree.get(BODY_CONTROL).getNumber();
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
-                "mod.creature.trollwitchdoctor",
+                "feudalcreatures.trollwitchdoctor",
                 "Troll Witch Doctor",
                 "Dis wont hurt a bit...",
                 "model.creature.humanoid.troll.standard",
                 types,
-                (byte)0, (short)5, (byte)0, (short)360, (short)20, (short)35,
+                BodyTemplate.TYPE_ETTIN, (short)5, (byte)0, (short)360, (short)20, (short)35,
                 DEATH_TROLL_SND, DEATH_TROLL_SND, HIT_TROLL_SND, HIT_TROLL_SND,
                 1.0F, 2.0F, 0.0F, 0.0F, 0.0F, 0.0F,
                 0.8F, 0, new int[0], 3, 0, (byte)80
