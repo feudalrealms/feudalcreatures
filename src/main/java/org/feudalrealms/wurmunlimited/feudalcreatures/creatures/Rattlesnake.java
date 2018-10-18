@@ -1,24 +1,29 @@
 package org.feudalrealms.wurmunlimited.feudalcreatures.creatures;
 
-import java.util.Map;
-
 import com.wurmonline.mesh.Tiles;
+import com.wurmonline.server.bodys.Wound;
 import com.wurmonline.server.combat.ArmourTemplate;
+import com.wurmonline.server.combat.CombatMove;
 import com.wurmonline.server.creatures.CreatureTemplate;
 import com.wurmonline.server.creatures.CreatureTemplateFactory;
 import com.wurmonline.server.creatures.CreatureTemplateIds;
 import com.wurmonline.server.creatures.NoSuchCreatureTemplateException;
 import com.wurmonline.server.skills.Skill;
+import com.wurmonline.shared.constants.CreatureTypes;
+import com.wurmonline.shared.constants.ItemMaterials;
+import com.wurmonline.shared.constants.SoundNames;
 import org.feudalrealms.wurmunlimited.feudalcreatures.FeudalCreatures;
 import org.gotti.wurmunlimited.modsupport.CreatureTemplateBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.EncounterBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreature;
-import com.wurmonline.shared.constants.CreatureTypes;
-import com.wurmonline.shared.constants.SoundNames;
-import static com.wurmonline.server.skills.SkillList.*;
+
+import java.util.Map;
 import java.util.logging.Logger;
 
-public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
+import static com.wurmonline.server.items.ItemList.*;
+import static com.wurmonline.server.skills.SkillList.*;
+
+public class Rattlesnake implements ModCreature, CreatureTypes, SoundNames {
     private int templateId;
     private Map<Integer, Skill> baseSkillTree;
     private static final Logger LOGGER = Logger.getLogger(FeudalCreatures.class.getName());
@@ -28,59 +33,62 @@ public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
         this.getBaseTemplate();
 
         int[] types = { C_TYPE_MOVE_GLOBAL,
-                C_TYPE_HUMAN,
+                C_TYPE_ANIMAL,
                 C_TYPE_AGG_HUMAN,
                 C_TYPE_SWIMMING,
                 C_TYPE_HUNTING,
-                C_TYPE_DOMINATABLE,
                 C_TYPE_CARNIVORE,
-                C_TYPE_NON_NEWBIE };
+                C_TYPE_NON_NEWBIE,
+                C_TYPE_DETECTINVIS };
         float ogStrength = this.baseSkillTree.get(BODY_STRENGTH).getNumber();
         float ogStamina = this.baseSkillTree.get(BODY_STRENGTH).getNumber();
         float ogControl = this.baseSkillTree.get(BODY_CONTROL).getNumber();
+        final int[] itemsButchered = {leather,eye,tooth};
 
 //        CreatureTemplateBuilder buildero = new CreatureTemplateBuilder(
-//                "mod.creature.goblinbrute",
-//                "Goblin Brute",
-//                "He wants you to sit on his lap.",
-//                "model.creature.humanoid.goblin",
+//                "mod.creature.anaconda.rattlesnake",
+//                "Rattlesnake",
+//                "Hiisssssssssssssssssssssssssssss.....",
+//                "model.creature.anaconda",
 //                types,
 //                (byte)0, (short)5, (byte)0, (short)360, (short)20, (short)35,
-//                DEATH_MALE_SND, DEATH_FEMALE_SND, HIT_MALE_SND, HIT_FEMALE_SND,
-//                1.0F, 1.0F, 2.0F, 0.0F, 0.0F, 0.0F,
+//                DEATH_SNAKE_SND, DEATH_SNAKE_SND, HIT_SNAKE_SND, HIT_SNAKE_SND,
+//                1.0F, 0.0F, 0.0F, 2.0F, 0.0F, 0.0F,
 //                0.8F, 0, new int[0], 3, 0, (byte)80
 //        );
 
-        CreatureTemplateBuilder builder = new CreatureTemplateBuilder("mod.creature.goblinbrute") {
+        CreatureTemplateBuilder builder = new CreatureTemplateBuilder("mod.creature.rattlesnake") {
             @Override
             public CreatureTemplate build() {
                 try {
-                    return CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_CID);
+                    return CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.ANACONDA_CID);
                 } catch (NoSuchCreatureTemplateException e) {
                     throw new RuntimeException(e);
                 }
             }
         };
 
-        builder.types(types);
-        builder.name("Goblin Brute");
-        builder.description("He wants you to sit on his lap.");
+//        builder.types(types);
+        builder.name("Rattlesnake");
+        builder.description("Hiisssssssssssssssssssssssssssss.....");
 
         this.templateId = builder.getTemplateId();
 
         builder.skill(BODY_STRENGTH, ogStrength + (ogStrength*0.5f) );
-        builder.skill(BODY_CONTROL, ogControl);
-        builder.skill(BODY_STAMINA, ogStamina);
+        builder.skill(BODY_CONTROL, ogControl + (ogControl*0.25f));
+        builder.skill(BODY_STAMINA, ogStamina + (ogStamina*0.25f));
 
-        builder.handDamString("claw");
         builder.maxAge(100);
         builder.armourType(ArmourTemplate.ARMOUR_TYPE_LEATHER);
         builder.baseCombatRating(20.0f);
-        builder.combatDamageType((byte) 2);
-        builder.maxGroupAttackSize(6);
+        builder.combatDamageType(Wound.TYPE_POISON);
+        builder.handDamString("whip");
         builder.hasHands(true);
+        builder.setCombatMoves(new int[]{CombatMove.SWEEP});
         builder.maxPercentOfCreatures(0.02f);
-        LOGGER.info("FeudalCreatures: GoblinBrute");
+        builder.itemsButchered(itemsButchered);
+        builder.meatMaterial(ItemMaterials.MATERIAL_MEAT_SNAKE);
+        LOGGER.info("FeudalCreatures: Rattlesnake");
         return builder;
     }
 
@@ -92,7 +100,12 @@ public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
         new EncounterBuilder(Tiles.Tile.TILE_TREE.id)
                 .addCreatures(templateId, 2)
                 .build(1);
-
+        new EncounterBuilder(Tiles.Tile.TILE_GRASS.id)
+                .addCreatures(templateId, 2)
+                .build(1);
+        new EncounterBuilder(Tiles.Tile.TILE_SAND.id)
+                .addCreatures(templateId, 2)
+                .build(1);
         new EncounterBuilder(Tiles.Tile.TILE_CAVE.id, (byte) -1)
                 .addCreatures(templateId, 2)
                 .build(4);
@@ -100,7 +113,7 @@ public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
 
     private void getBaseTemplate() {
         try {
-            CreatureTemplate baseTemplate = CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_CID);
+            CreatureTemplate baseTemplate = CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.ANACONDA_CID);
             this.baseSkillTree = baseTemplate.getSkills().getSkillTree();
         } catch (Exception e) {
             throw new RuntimeException(e);
