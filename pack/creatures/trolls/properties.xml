@@ -1,0 +1,162 @@
+<properties>	
+
+		<Troll_main.wom>
+			<modelProperties>
+				<numberOfExtraIdleAnimations>2</numberOfExtraIdleAnimations>
+				<movementAnimationSwitch>
+					<switchToWalkSpeed>9</switchToWalkSpeed>
+					<switchToRunSpeed>10</switchToRunSpeed>
+				</movementAnimationSwitch>
+				<maxMovementAnimationSpeed>10</maxMovementAnimationSpeed>
+				<lod1>24</lod1>
+				<lod2>48</lod2>
+				<lod3>120</lod3>
+				<meshMask> 
+					<mesh>troll</mesh>
+					<mask>t_cm.dds</mask>
+				</meshMask>					
+			</modelProperties>
+			<anim>
+				<idle>
+					<file>anim/Troll_Idle0.wom</file>
+					<addToPeriodic/>
+				</idle>
+				<idle0>
+					<file>anim/Troll_Idle1.wom</file>		
+				</idle0>
+				<idle1>
+					<file>anim/Troll_Idle2.wom</file>		
+				</idle1>
+				
+				<walk>
+					<file>anim/Troll_Walk.wom</file>
+					<addToPeriodic/>
+				</walk>
+				<run>
+					<file>anim/Troll_Run.wom</file>
+					<addToPeriodic/>
+				</run>
+				
+				<ready>
+					<file>anim/Troll_ReadyStance.wom</file>
+					<addToPeriodic/>					
+				</ready>
+				
+				<fight_maul>
+					<file>anim/Troll_Attack0.wom</file>		
+				</fight_maul>
+				<fight_strike>
+					<file>anim/Troll_Attack1.wom</file>		
+				</fight_strike>
+				<fight_kick>
+					<file>anim/Troll_Attack2.wom</file>		
+				</fight_kick>
+				<fight_bite>
+					<file>anim/Troll_Attack3.wom</file>		
+				</fight_bite>
+				<fight_claw>
+					<file>anim/Troll_Attack1.wom</file>		
+				</fight_claw>
+				
+				<die>
+					<file>anim/Troll_Die.wom</file>
+						<effect>
+							<bloodEffectLarge>
+								<nullName>SpineTop</nullName>
+								<time>0.2</time>
+							</bloodEffectLarge>
+						</effect>
+				</die>
+				<dodge>
+					<file>anim/Troll_Dodge.wom</file>		
+				</dodge>			
+				<wounded>
+					<file>anim/Troll_Wounded.wom</file>
+						<effect>
+							<bloodEffectLarge>
+								<nullName>SpineTop</nullName>
+								<time>0.2</time>
+							</bloodEffectLarge>
+					  	</effect>	
+				</wounded>
+
+			</anim>			
+		</Troll_main.wom>
+
+		<trollKing_main.wom>
+			<modelProperties>
+				<numberOfExtraIdleAnimations>2</numberOfExtraIdleAnimations>
+				<movementAnimationSwitch>
+					<switchToWalkSpeed>11</switchToWalkSpeed>
+					<switchToRunSpeed>12</switchToRunSpeed>
+				</movementAnimationSwitch>
+			
+				<maxMovementAnimationSpeed>12</maxMovementAnimationSpeed>				
+			</modelProperties>
+			<anim>
+				<idle>
+					<file>anim/Troll_Idle0.wom</file>
+					<addToPeriodic/>
+				</idle>
+				<idle0>
+					<file>anim/Troll_Idle1.wom</file>		
+				</idle0>
+				<idle1>
+					<file>anim/Troll_Idle2.wom</file>		
+				</idle1>
+				
+				<walk>
+					<file>anim/Troll_Walk.wom</file>
+					<addToPeriodic/>
+				</walk>
+				<run>
+					<file>anim/Troll_Run.wom</file>
+					<addToPeriodic/>
+				</run>
+				
+				<ready>
+					<file>anim/Troll_ReadyStance.wom</file>
+					<addToPeriodic/>					
+				</ready>
+				
+				<fight_maul>
+					<file>anim/Troll_Attack0.wom</file>		
+				</fight_maul>
+				<fight_strike>
+					<file>anim/Troll_Attack1.wom</file>		
+				</fight_strike>
+				<fight_kick>
+					<file>anim/Troll_Attack2.wom</file>		
+				</fight_kick>
+				<fight_bite>
+					<file>anim/Troll_Attack3.wom</file>		
+				</fight_bite>
+				<fight_claw>
+					<file>anim/Troll_Attack1.wom</file>		
+				</fight_claw>
+				
+				<die>
+					<file>anim/Troll_Die.wom</file>
+						<effect>
+							<bloodEffectLarge>
+								<nullName>SpineTop</nullName>
+								<time>0.2</time>
+							</bloodEffectLarge>
+						</effect>
+				</die>
+				<dodge>
+					<file>anim/Troll_Dodge.wom</file>		
+				</dodge>			
+				<wounded>
+					<file>anim/Troll_Wounded.wom</file>
+						<effect>
+							<bloodEffectLarge>
+								<nullName>SpineTop</nullName>
+								<time>0.2</time>
+							</bloodEffectLarge>
+					  	</effect>	
+				</wounded>
+
+			</anim>			
+		</trollKing_main.wom>
+</properties>

@@ -2,13 +2,14 @@ plugins {
     id 'java'
 }
 
-group 'io.gts.wurm'
-version '1.0-SNAPSHOT'
+group "org.feudalrealms.wurmunlimited"
+version "1.0"
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    mavenLocal()
     maven { url "http://gotti.no-ip.org/maven/repository" }
 }
 
@@ -16,14 +17,18 @@ dependencies {
     compile 'org.gotti.wurmunlimited:server-modlauncher:0.40'
 }
 
-jar {
-    archiveName "${project.name}.jar"
+
+task pack(type: Zip) {
+    from fileTree(dir: 'pack', include: '**')
+    destinationDir = file("build/pack")
+    archiveName "feudalcreatures_models.zip"
 }
 
 task dist(type: Zip) {
     into("mods", {
         into(project.name, {
             from jar
+            from pack
         })
         from fileTree(dir: 'mods', include: '*')
     })

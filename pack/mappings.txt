@@ -1,0 +1,18 @@
+#  Troll  ----------------------------------------------------------
+
+model.creature.humanoid.troll.standard.witchdoctor	= creatures/trolls/TrollKX_main.wom?trollMat.texture=Troll_WitchDoctor.png
+model.corpse.witchdoctor           					= creatures/trolls/TrollKX_Corpse.wom?trollMat.texture=Troll_WitchDoctor.png
+
+#  Goblin Brute ----------------------------------------------------------
+
+model.creature.goblinbrute          			= creatures/goblins/Goblin_main.wom?lambert2.texture=GoblinBrute.dds
+model.corpse.goblinbrute           				= creatures/goblins/Goblin_Corpse.wom?lambert2.texture=GoblinBrute.dds
+model.corpse.goblinbrute.        				= creatures/goblins/Goblin_Corpse.wom?lambert2.texture=GoblinBrute.dds
+
+#  RattleSnake ---------------------------------------------------------------------------------------
+
+model.creature.rattlesnake          			= creatures/rattlesnake/Anaconda_main.wom?AnacondaMat.texture=Rattlesnake.dds
+model.corpse.rattlesnake            			= creatures/rattlesnake/Anaconda_Corpse.wom?AnacondaMat.texture=Rattlesnake.dds
+model.corpse.rattlesnake            			= creatures/rattlesnake/Anaconda_Corpse.wom?AnacondaMat.texture=Rattlesnake.dds
+
+

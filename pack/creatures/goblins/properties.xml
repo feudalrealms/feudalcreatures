@@ -1,0 +1,161 @@
+<properties>	
+		<Goblin_main.wom>
+			<modelProperties>
+			
+				<numberOfExtraIdleAnimations>3</numberOfExtraIdleAnimations>
+
+				<movementAnimationSwitch>
+					<switchToWalkSpeed>8</switchToWalkSpeed>
+					<switchToRunSpeed>14</switchToRunSpeed>
+				</movementAnimationSwitch>
+				
+				<maxMovementAnimationSpeed>15</maxMovementAnimationSpeed>
+				<lod1>12</lod1>
+				<lod2>24</lod2>
+				<lod3>64</lod3>
+				<mask>g_cm.dds</mask>
+				
+			</modelProperties>
+			
+			<anim>
+				<idle>
+					<file>anim/Goblin_Idle0.wom</file>
+					<addToPeriodic/>					
+				</idle>
+				<idle0>
+					<file>anim/Goblin_Idle1.wom</file>		
+				</idle0>
+				<idle1>
+					<file>anim/Goblin_Idle2.wom</file>		
+				</idle1>
+				<idle2>
+					<file>anim/Goblin_Idle3.wom</file>		
+				</idle2>
+				
+				
+				<walk>
+					<file>anim/Goblin_Walk.wom</file>
+					<addToPeriodic/>
+				</walk>
+				<run>
+					<file>anim/Goblin_Run.wom</file>
+					<addToPeriodic/>
+				</run>
+				
+				<ready>
+					<file>anim/Goblin_ReadyStance.wom</file>
+					<addToPeriodic/>					
+				</ready>
+				<fight_strike>
+					<file>anim/Goblin_Attack0.wom</file>		
+				</fight_strike>
+				<fight_bite>
+					<file>anim/Goblin_Attack2.wom</file>		
+				</fight_bite>
+				<fight_kick>
+					<file>anim/Goblin_Attack1.wom</file>		
+				</fight_kick>
+				
+				<wounded>
+					<file>anim/Goblin_Wounded.wom</file>
+					<effect>
+						<bloodEffectSmall>
+							<nullName>SpineTop</nullName>
+							<time>0.2</time>
+						</bloodEffectSmall>
+					</effect>					
+				</wounded>
+				<dodge>
+					<file>anim/Goblin_Dodge.wom</file>		
+				</dodge>
+				<die>
+					<file>anim/Goblin_Die.wom</file>
+					<effect>
+						<bloodEffectSmall>
+							<nullName>SpineTop</nullName>
+							<time>0.5</time>
+						</bloodEffectSmall>
+					</effect>					
+				</die>
+			</anim>
+	
+		</Goblin_main.wom>
+
+		<goblinLeader_main.wom>
+			<modelProperties>
+			
+				<numberOfExtraIdleAnimations>3</numberOfExtraIdleAnimations>
+
+				<movementAnimationSwitch>
+					<switchToWalkSpeed>8</switchToWalkSpeed>
+					<switchToRunSpeed>14</switchToRunSpeed>
+				</movementAnimationSwitch>
+				
+				<maxMovementAnimationSpeed>15</maxMovementAnimationSpeed>
+				
+			</modelProperties>
+			
+			<anim>
+				<idle>
+					<file>anim/Goblin_Idle0.wom</file>
+					<addToPeriodic/>					
+				</idle>
+				<idle0>
+					<file>anim/Goblin_Idle1.wom</file>		
+				</idle0>
+				<idle1>
+					<file>anim/Goblin_Idle2.wom</file>		
+				</idle1>
+				<idle2>
+					<file>anim/Goblin_Idle3.wom</file>		
+				</idle2>
+				
+				
+				<walk>
+					<file>anim/Goblin_Walk.wom</file>
+					<addToPeriodic/>
+				</walk>
+				<run>
+					<file>anim/Goblin_Run.wom</file>
+					<addToPeriodic/>
+				</run>
+				
+				<ready>
+					<file>anim/Goblin_ReadyStance.wom</file>
+					<addToPeriodic/>					
+				</ready>
+				<fight_strike>
+					<file>anim/Goblin_Attack0.wom</file>		
+				</fight_strike>
+				<fight_bite>
+					<file>anim/Goblin_Attack2.wom</file>		
+				</fight_bite>
+				<fight_kick>
+					<file>anim/Goblin_Attack1.wom</file>		
+				</fight_kick>
+				
+				<wounded>
+					<file>anim/Goblin_Wounded.wom</file>
+					<effect>
+						<bloodEffectSmall>
+							<nullName>SpineTop</nullName>
+							<time>0.2</time>
+						</bloodEffectSmall>
+					</effect>					
+				</wounded>
+				<dodge>
+					<file>anim/Goblin_Dodge.wom</file>		
+				</dodge>
+				<die>
+					<file>anim/Goblin_Die.wom</file>
+					<effect>
+						<bloodEffectSmall>
+							<nullName>SpineTop</nullName>
+							<time>0.5</time>
+						</bloodEffectSmall>
+					</effect>					
+				</die>
+			</anim>
+	
+		</goblinLeader_main.wom>
+</properties>
