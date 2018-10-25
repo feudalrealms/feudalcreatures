@@ -1,6 +1,5 @@
 package org.feudalrealms.wurmunlimited.feudalcreatures.creatures;
 
-import java.util.Map;
 import java.util.logging.Logger;
 import com.wurmonline.mesh.Tiles;
 import com.wurmonline.server.bodys.Wound;
@@ -11,7 +10,7 @@ import com.wurmonline.server.combat.CombatMove;
 // import com.wurmonline.server.creatures.CreatureTemplateIds;
 import com.wurmonline.shared.constants.CreatureTypes;
 import com.wurmonline.shared.constants.ItemMaterials;
-import org.feudalrealms.wurmunlimited.feudalcreatures.FeudalCreatures;
+import org.feudalrealms.wurmunlimited.feudalcreatures.Initiator;
 import org.gotti.wurmunlimited.modsupport.CreatureTemplateBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.EncounterBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreature;
@@ -24,7 +23,7 @@ import static com.wurmonline.server.items.ItemList.*;
 public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMaterials {
     private int templateId;
 //    private Map<Integer, Skill> baseSkillTree;
-    private static final Logger LOGGER = Logger.getLogger(FeudalCreatures.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Initiator.class.getName());
 
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
 
@@ -72,7 +71,7 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
         builder.maxPercentOfCreatures(0.04f);
 
 
-        LOGGER.info("FeudalCreatures: Troll Witchdoctor");
+        LOGGER.info("Initiator: Troll Witchdoctor");
         return builder;
     }
 

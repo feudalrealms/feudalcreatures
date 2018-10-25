@@ -8,9 +8,9 @@ import org.feudalrealms.wurmunlimited.feudalcreatures.creatures.*;
 import java.util.logging.Logger;
 
 
-public class FeudalCreatures implements WurmServerMod, Initable {
+public class Initiator implements WurmServerMod, Initable {
 
-    private static final Logger LOGGER = Logger.getLogger(FeudalCreatures.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Initiator.class.getName());
 
     @Override
     public void init() {

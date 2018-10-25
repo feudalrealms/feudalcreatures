@@ -9,7 +9,7 @@ import com.wurmonline.server.creatures.CreatureTemplateFactory;
 import com.wurmonline.server.creatures.CreatureTemplateIds;
 import com.wurmonline.server.creatures.NoSuchCreatureTemplateException;
 import com.wurmonline.server.skills.Skill;
-import org.feudalrealms.wurmunlimited.feudalcreatures.FeudalCreatures;
+import org.feudalrealms.wurmunlimited.feudalcreatures.Initiator;
 import org.gotti.wurmunlimited.modsupport.CreatureTemplateBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.EncounterBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreature;
@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
     private int templateId;
     private Map<Integer, Skill> baseSkillTree;
-    private static final Logger LOGGER = Logger.getLogger(FeudalCreatures.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Initiator.class.getName());
 
     @Override
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
@@ -80,7 +80,7 @@ public class GoblinBrute implements ModCreature, CreatureTypes, SoundNames {
         builder.maxGroupAttackSize(6);
         builder.hasHands(true);
         builder.maxPercentOfCreatures(0.02f);
-        LOGGER.info("FeudalCreatures: GoblinBrute");
+        LOGGER.info("Initiator: GoblinBrute");
         return builder;
     }
 

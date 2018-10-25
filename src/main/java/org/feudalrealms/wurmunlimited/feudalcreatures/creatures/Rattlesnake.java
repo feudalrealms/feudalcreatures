@@ -12,7 +12,7 @@ import com.wurmonline.server.skills.Skill;
 import com.wurmonline.shared.constants.CreatureTypes;
 import com.wurmonline.shared.constants.ItemMaterials;
 import com.wurmonline.shared.constants.SoundNames;
-import org.feudalrealms.wurmunlimited.feudalcreatures.FeudalCreatures;
+import org.feudalrealms.wurmunlimited.feudalcreatures.Initiator;
 import org.gotti.wurmunlimited.modsupport.CreatureTemplateBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.EncounterBuilder;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreature;
@@ -26,7 +26,7 @@ import static com.wurmonline.server.skills.SkillList.*;
 public class Rattlesnake implements ModCreature, CreatureTypes, SoundNames {
     private int templateId;
     private Map<Integer, Skill> baseSkillTree;
-    private static final Logger LOGGER = Logger.getLogger(FeudalCreatures.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Initiator.class.getName());
 
     @Override
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
@@ -88,7 +88,7 @@ public class Rattlesnake implements ModCreature, CreatureTypes, SoundNames {
         builder.maxPercentOfCreatures(0.02f);
         builder.itemsButchered(itemsButchered);
         builder.meatMaterial(ItemMaterials.MATERIAL_MEAT_SNAKE);
-        LOGGER.info("FeudalCreatures: Rattlesnake");
+        LOGGER.info("Initiator: Rattlesnake");
         return builder;
     }
 
