@@ -1,18 +1,20 @@
 #  Troll  ----------------------------------------------------------
 
-model.creature.humanoid.troll.standard.witchdoctor	= creatures/trolls/TrollKX_main.wom?trollMat.texture=Troll_WitchDoctor.png
-model.corpse.witchdoctor           					= creatures/trolls/TrollKX_Corpse.wom?trollMat.texture=Troll_WitchDoctor.png
+model.creature.trollwitchdoctor             = creatures/fr/witchdoctor/Troll_main.wom?trollMat.texture=Troll_Witchdoctor.png
+model.corpse.trollwitchdoctor               = creatures/fr/witchdoctor/Troll_corpse.wom?trollMat.texture=Troll_Witchdoctor.png
+model.corpse.trollwitchdoctor.butchered     = creatures/butcherdgeneric/butcheredGeneric1.wom
+icon.model.creature.trollwitchdoctor        = creatures/icons/Icon_Troll.png
 
 #  Goblin Brute ----------------------------------------------------------
 
-model.creature.goblinbrute          			= creatures/goblins/Goblin_main.wom?lambert2.texture=GoblinBrute.dds
-model.corpse.goblinbrute           				= creatures/goblins/Goblin_Corpse.wom?lambert2.texture=GoblinBrute.dds
-model.corpse.goblinbrute.        				= creatures/goblins/Goblin_Corpse.wom?lambert2.texture=GoblinBrute.dds
+model.creature.goblinbrute          	= creatures/fr/goblinbrute/Goblin_main.wom?goblinMat.texture=GoblinBrute.dds
+model.corpse.goblinbrute           		= creatures/fr/goblinbrute/Goblin_Corpse.wom?goblinMat.texture=GoblinBrute.dds
+model.corpse.goblinbrute.butchered      = creatures/butcherdgeneric/butcheredGeneric1.wom
 
 #  RattleSnake ---------------------------------------------------------------------------------------
 
-model.creature.rattlesnake          			= creatures/rattlesnake/Anaconda_main.wom?AnacondaMat.texture=Rattlesnake.dds
-model.corpse.rattlesnake            			= creatures/rattlesnake/Anaconda_Corpse.wom?AnacondaMat.texture=Rattlesnake.dds
-model.corpse.rattlesnake            			= creatures/rattlesnake/Anaconda_Corpse.wom?AnacondaMat.texture=Rattlesnake.dds
-
+model.creature.rattlesnake          	= creatures/fr/rattlesnake/Anaconda_main.wom?AnacondaMat.texture=Rattlesnake.dds
+model.corpse.rattlesnake            	= creatures/fr/rattlesnake/Anaconda_Corpse.wom?AnacondaMat.texture=Rattlesnake.dds
+model.corpse.rattlesnake.butchered      = creatures/butcherdgeneric/butcheredGeneric1.wom
+icon.model.creature.rattlesnake         = creatures/icons/Icon_Anaconda.png
 

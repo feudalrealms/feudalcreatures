@@ -1,11 +1,9 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
 
 group "org.feudalrealms.wurmunlimited"
 version "1.0"
 
-sourceCompatibility = 1.8
+//sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -17,6 +15,9 @@ dependencies {
     compile 'org.gotti.wurmunlimited:server-modlauncher:0.40'
 }
 
+jar {
+    archiveName "${project.name}.jar"
+}
 
 task pack(type: Zip) {
     from fileTree(dir: 'pack', include: '**')
