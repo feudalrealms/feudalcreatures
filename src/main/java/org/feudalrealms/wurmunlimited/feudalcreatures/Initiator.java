@@ -20,6 +20,7 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
         Constants.SpawnTrollWitchDooctor = Boolean.parseBoolean(properties.getProperty("SpawnTrollWitchDooctor", Boolean.toString(Constants.SpawnTrollWitchDooctor)));
         Constants.SpawnGoblinBrute = Boolean.parseBoolean(properties.getProperty("SpawnGoblinBrute", Boolean.toString(Constants.SpawnGoblinBrute)));
         Constants.SpawnRattlesnake = Boolean.parseBoolean(properties.getProperty("SpawnRattlesnake", Boolean.toString(Constants.SpawnRattlesnake)));
+        Constants.SpawnPixie = Boolean.parseBoolean(properties.getProperty("SpawnPixie", Boolean.toString(Constants.SpawnPixie)));
     }
 
 
@@ -31,6 +32,7 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
             ModCreatures.addCreature((ModCreature) new TrollWitchDoctor());
             ModCreatures.addCreature((ModCreature) new GoblinBrute());
             ModCreatures.addCreature((ModCreature) new Rattlesnake());
+           // ModCreatures.addCreature((ModCreature) new Pixie());
 
         } catch (Throwable throwable) {
             LOGGER.severe("Error In Initializing");

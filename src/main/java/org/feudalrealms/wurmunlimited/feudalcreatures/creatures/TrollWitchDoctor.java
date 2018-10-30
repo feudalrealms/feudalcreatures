@@ -27,7 +27,7 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
 
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
 
-        int[] types = { C_TYPE_MOVE_GLOBAL,C_TYPE_HUMAN,C_TYPE_AGG_HUMAN,C_TYPE_SWIMMING,C_TYPE_HUNTING,C_TYPE_CARNIVORE,C_TYPE_NON_NEWBIE };
+        int[] types = { C_TYPE_MOVE_GLOBAL,C_TYPE_MONSTER,C_TYPE_AGG_HUMAN,C_TYPE_SWIMMING,C_TYPE_HUNTING,C_TYPE_CARNIVORE,C_TYPE_NON_NEWBIE };
         final int[] itemsButchered = {leather, cookedMeat, farmersSalve, potion};
 
 
