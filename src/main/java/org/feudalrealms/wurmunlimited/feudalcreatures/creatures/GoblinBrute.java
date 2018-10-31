@@ -35,7 +35,8 @@ public class GoblinBrute implements ModCreature, CreatureTypes, ItemMaterials, S
                 C_TYPE_NON_NEWBIE,
                 C_MOD_CHAMPION,
                 C_TYPE_MOVE_GLOBAL,
-                C_TYPE_AGG_HUMAN
+                C_TYPE_AGG_HUMAN,
+                C_TYPE_STEALTH
         };
 
         final int[] itemsButchered = {leather,eye,tooth,bladder,heart,skullGoblin};
