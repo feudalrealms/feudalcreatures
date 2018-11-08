@@ -40,6 +40,7 @@ public class Pixie implements ModCreature, CreatureTypes, ItemMaterials, SoundNa
                 C_TYPE_AGG_HUMAN
         };
 
+        
         final int[] itemsButchered = {wemp, eye, tooth, bladder, heart, flowerLavender, brandy};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
