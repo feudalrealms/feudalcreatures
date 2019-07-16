@@ -67,13 +67,11 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
         builder.handDamString("claw");
         builder.kickDamString("kick");
         builder.maxGroupAttackSize(4);
-        builder.setCombatMoves(new int[]{CombatMove.STUN, CombatMove.DOUBLE_FIST});
-        builder.maxPercentOfCreatures(0.04f);
-        builder.addPrimaryAttack(new AttackAction("maul", AttackIdentifier.MAUL, new AttackValues(7.0F, 0.04F, 6.0F, 3, 2, (byte)0, true, 3, 1.4F)));
+        builder.setCombatMoves(new int[]{CombatMove.STUN, CombatMove.FIGHTAGG});
+        builder.maxPercentOfCreatures(0.02f);
         builder.addPrimaryAttack(new AttackAction("strike", AttackIdentifier.STRIKE, new AttackValues(7.0F, 0.04F, 4.0F, 3, 1, (byte)0, false, 3, 1.4F)));
         builder.addSecondaryAttack(new AttackAction("kick", AttackIdentifier.KICK, new AttackValues(4.0F, 0.04F, 5.0F, 3, 1, (byte)0, false, 3, 2.1F)));
         builder.addSecondaryAttack(new AttackAction("bite", AttackIdentifier.BITE, new AttackValues(10.0F, 0.08F, 7.0F, 3, 1, (byte)3, false, 3, 2.0F)));
-        builder.addSecondaryAttack(new AttackAction("kick", AttackIdentifier.CLAW, new AttackValues(5.0F, 0.1F, 7.0F, 3, 1, (byte)1, false, 3, 1.8F)));
 
         LOGGER.info("Initiator: Troll Witchdoctor");
         return builder;

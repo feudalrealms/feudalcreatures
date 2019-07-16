@@ -11,6 +11,12 @@ model.creature.goblinbrute          	= creatures/fr/goblinbrute/Goblin_main.wom?
 model.corpse.goblinbrute           		= creatures/fr/goblinbrute/Goblin_Corpse.wom?goblinMat.texture=GoblinBrute.dds
 model.corpse.goblinbrute.butchered      = creatures/butcherdgeneric/butcheredGeneric1.wom
 
+#  Goblin Pirate ----------------------------------------------------------
+
+model.creature.goblinpirate          	= creatures/fr/goblinpirate/Goblin_main.wom?goblinMat.texture=GoblinPirate.dds
+model.corpse.goblinpirate           	= creatures/fr/goblinpirate/Goblin_Corpse.wom?goblinMat.texture=GoblinPirate.dds
+model.corpse.goblinpirate.butchered     = creatures/butcherdgeneric/butcheredGeneric1.wom
+
 #  RattleSnake ---------------------------------------------------------------------------------------
 
 model.creature.rattlesnake          	= creatures/fr/rattlesnake/Anaconda_main.wom?AnacondaMat.texture=Rattlesnake.dds
@@ -18,3 +24,9 @@ model.corpse.rattlesnake            	= creatures/fr/rattlesnake/Anaconda_Corpse.
 model.corpse.rattlesnake.butchered      = creatures/butcherdgeneric/butcheredGeneric1.wom
 icon.model.creature.rattlesnake         = creatures/icons/Icon_Anaconda.png
 
+#  Snapper ----------------------------------------------------------
+
+model.creature.snapper          	= creatures/fr/snapper/Tortoise_main.dae?tortoiseMat.texture=snapper.png
+model.corpse.snapper           		= creatures/fr/snapper/Tortoise_corpse.dae?tortoiseMat.texture=snapper.png
+model.corpse.snapper.butchered      = creatures/butcherdgeneric/butcheredGeneric1.wom
+icon.model.creature.snapper         = creatures/icons/Icon_Tortoise.png

@@ -19,9 +19,11 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
         //facades
         Constants.SpawnTrollWitchDooctor = Boolean.parseBoolean(properties.getProperty("SpawnTrollWitchDooctor", Boolean.toString(Constants.SpawnTrollWitchDooctor)));
         Constants.SpawnGoblinBrute = Boolean.parseBoolean(properties.getProperty("SpawnGoblinBrute", Boolean.toString(Constants.SpawnGoblinBrute)));
+        Constants.SpawnGoblinPirate = Boolean.parseBoolean(properties.getProperty("SpawnGoblinPirate", Boolean.toString(Constants.SpawnGoblinPirate)));
         Constants.SpawnRattlesnake = Boolean.parseBoolean(properties.getProperty("SpawnRattlesnake", Boolean.toString(Constants.SpawnRattlesnake)));
         Constants.SpawnPixie = Boolean.parseBoolean(properties.getProperty("SpawnPixie", Boolean.toString(Constants.SpawnPixie)));
         Constants.SpawnBrigand = Boolean.parseBoolean(properties.getProperty("SpawnBrigand", Boolean.toString(Constants.SpawnBrigand)));
+        Constants.SpawnSnapper = Boolean.parseBoolean(properties.getProperty("SpawnSnapper", Boolean.toString(Constants.SpawnSnapper)));
     }
 
 
@@ -32,8 +34,10 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
             ModCreatures.init();
             ModCreatures.addCreature((ModCreature) new TrollWitchDoctor());
             ModCreatures.addCreature((ModCreature) new GoblinBrute());
+            ModCreatures.addCreature((ModCreature) new GoblinPirate());
             ModCreatures.addCreature((ModCreature) new Rattlesnake());
             ModCreatures.addCreature((ModCreature) new Brigand());
+            ModCreatures.addCreature((ModCreature) new Snapper());
            // ModCreatures.addCreature((ModCreature) new Pixie());
 
         } catch (Throwable throwable) {
