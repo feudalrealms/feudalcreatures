@@ -28,7 +28,7 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
 
         int[] types = { C_TYPE_MOVE_GLOBAL,C_TYPE_MONSTER,C_TYPE_AGG_HUMAN,C_TYPE_SWIMMING,C_TYPE_HUNTING,C_TYPE_CARNIVORE,C_TYPE_NON_NEWBIE,C_TYPE_STEALTH };
-        final int[] itemsButchered = {leather, cookedMeat, farmersSalve, potion};
+        final int[] itemsButchered = {meat,tallow,eye,bladder,heart};
 
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
@@ -50,12 +50,10 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
         builder.skill(MIND_SPEED, 40.0F);
         builder.skill(SOUL_STRENGTH, 20.0F);
         builder.skill(SOUL_DEPTH, 20.0F);
-        builder.skill(SOUL_STRENGTH, 20.0F);
         builder.skill(WEAPONLESS_FIGHTING, 50.0f);
 
-
         builder.leaderTemplateId(27);
-        builder.alignment(-50.0F);
+        builder.alignment(-99.0F);
         builder.hasHands(true);
         builder.usesNewAttacks(true);
         builder.boundsValues(-0.5F, -0.5F, 0.5F, 0.5F);
@@ -66,9 +64,12 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
         builder.combatDamageType(Wound.TYPE_POISON);
         builder.handDamString("claw");
         builder.kickDamString("kick");
-        builder.maxGroupAttackSize(4);
+        builder.maxGroupAttackSize(8);
+        builder.denMaterial((byte)15);
+        builder.denName("troll mound");
         builder.setCombatMoves(new int[]{CombatMove.STUN, CombatMove.FIGHTAGG});
         builder.maxPercentOfCreatures(0.02f);
+        builder.addPrimaryAttack(new AttackAction("maul", AttackIdentifier.MAUL, new AttackValues(7.0F, 0.04F, 6.0F, 3, 2, (byte)0, true, 3, 1.4F)));
         builder.addPrimaryAttack(new AttackAction("strike", AttackIdentifier.STRIKE, new AttackValues(7.0F, 0.04F, 4.0F, 3, 1, (byte)0, false, 3, 1.4F)));
         builder.addSecondaryAttack(new AttackAction("kick", AttackIdentifier.KICK, new AttackValues(4.0F, 0.04F, 5.0F, 3, 1, (byte)0, false, 3, 2.1F)));
         builder.addSecondaryAttack(new AttackAction("bite", AttackIdentifier.BITE, new AttackValues(10.0F, 0.08F, 7.0F, 3, 1, (byte)3, false, 3, 2.0F)));
@@ -79,7 +80,7 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
 
     public void addEncounters() {
         if (templateId == 0) return;
-        if (Constants.SpawnTrollWitchDooctor) {
+        if (Constants.SpawnTrollWitchDoctor) {
             new EncounterBuilder(Tiles.Tile.TILE_TREE.id)
                     .addCreatures(templateId, 1)
                     .build(1);

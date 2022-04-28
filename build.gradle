@@ -1,18 +1,17 @@
 apply plugin: 'java'
 
 group "org.feudalrealms.wurmunlimited"
-version "1.2"
+version "1.3"
 
-//sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
     mavenLocal()
-    maven { url "http://gotti.no-ip.org/maven/repository" }
+    maven { url "https://gotti.no-ip.org/maven/repository" }
 }
 
 dependencies {
-    compile 'org.gotti.wurmunlimited:server-modlauncher:0.40'
+    implementation 'org.gotti.wurmunlimited:server-modlauncher:0.40'
 }
 
 jar {
@@ -21,7 +20,7 @@ jar {
 
 task pack(type: Zip) {
     from fileTree(dir: 'pack', include: '**')
-    destinationDir = file("build/pack")
+    destinationDirectory = file("build/pack")
     archiveName "feudalcreatures_models.zip"
 }
 

@@ -34,12 +34,11 @@ public class GoblinBrute implements ModCreature, CreatureTypes, ItemMaterials, S
                 C_TYPE_OPENDOORS,
                 C_TYPE_NON_NEWBIE,
                 C_MOD_CHAMPION,
-                C_TYPE_MOVE_GLOBAL,
                 C_TYPE_AGG_HUMAN,
                 C_TYPE_STEALTH
         };
 
-        final int[] itemsButchered = {leather,eye,tooth,bladder,heart,skullGoblin};
+        final int[] itemsButchered = {meat, eye,tooth,bladder,heart,skullGoblin};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
                 "mod.creature.goblinbrute","Goblin Brute",
@@ -62,7 +61,7 @@ public class GoblinBrute implements ModCreature, CreatureTypes, ItemMaterials, S
         builder.skill(SOUL_DEPTH, 7.0F);
         builder.skill(WEAPONLESS_FIGHTING, 50.0F);
         builder.leaderTemplateId(26);
-        builder.alignment(-40.0F);
+        builder.alignment(-100.0F);
         builder.baseCombatRating(40.0f);
         builder.combatDamageType((byte) 2);
         builder.maxGroupAttackSize(4);

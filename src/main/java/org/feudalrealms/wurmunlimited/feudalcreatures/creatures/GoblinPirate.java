@@ -40,7 +40,7 @@ public class GoblinPirate implements ModCreature, CreatureTypes, ItemMaterials, 
                 C_TYPE_STEALTH
         };
 
-        final int[] itemsButchered = {leather,eye,tooth,bladder,heart,skullGoblin};
+        final int[] itemsButchered = {meat, eye,tooth,bladder,heart,skullGoblin};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
                 "mod.creature.goblinpirate","Goblin Pirate",
@@ -63,7 +63,7 @@ public class GoblinPirate implements ModCreature, CreatureTypes, ItemMaterials, 
         builder.skill(SOUL_DEPTH, 37.0F);
         builder.skill(WEAPONLESS_FIGHTING, 45.0F);
         builder.leaderTemplateId(26);
-        builder.alignment(-40.0F);
+        builder.alignment(-100.0F);
         builder.baseCombatRating(40.0f);
         builder.combatDamageType((byte) 2);
         builder.maxGroupAttackSize(4);

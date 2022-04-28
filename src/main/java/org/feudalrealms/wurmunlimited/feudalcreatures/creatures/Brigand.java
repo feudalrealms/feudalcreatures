@@ -43,7 +43,7 @@ public class Brigand implements ModCreature, CreatureTypes, ItemMaterials, Sound
                 C_TYPE_AGG_HUMAN
         };
 
-        final int[] itemsButchered = {heart, skull, leather, coinSilverFive, coinCopperTwenty, coinIronTwenty, silverBar };
+        final int[] itemsButchered = {meat, heart, skull};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
                 "mod.creature.brigand", "Brigand",
@@ -65,7 +65,7 @@ public class Brigand implements ModCreature, CreatureTypes, ItemMaterials, Sound
         builder.skill(SOUL_STRENGTH, 46.0F);
         builder.skill(SOUL_DEPTH, 37.0F);
         builder.skill(WEAPONLESS_FIGHTING, 55.0F);
-        builder.alignment(-40.0F);
+        builder.alignment(-100.0F);
         builder.combatDamageType((byte) 1);
         builder.maxGroupAttackSize(4);
         builder.hasHands(true);

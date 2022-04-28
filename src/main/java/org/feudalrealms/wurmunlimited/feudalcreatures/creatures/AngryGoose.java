@@ -1,13 +1,15 @@
 package org.feudalrealms.wurmunlimited.feudalcreatures.creatures;
 
 import com.wurmonline.mesh.Tiles;
+import com.wurmonline.server.bodys.Wound;
 import com.wurmonline.server.combat.ArmourTemplate;
 import com.wurmonline.server.combat.CombatMove;
-import com.wurmonline.server.bodys.Wound;
+import com.wurmonline.server.creatures.AttackAction;
+import com.wurmonline.server.creatures.AttackIdentifier;
+import com.wurmonline.server.creatures.AttackValues;
 import com.wurmonline.shared.constants.CreatureTypes;
 import com.wurmonline.shared.constants.ItemMaterials;
 import com.wurmonline.shared.constants.SoundNames;
-import com.wurmonline.server.bodys.BodyTemplate;
 import org.feudalrealms.wurmunlimited.feudalcreatures.Constants;
 import org.feudalrealms.wurmunlimited.feudalcreatures.Initiator;
 import org.gotti.wurmunlimited.modsupport.CreatureTemplateBuilder;
@@ -19,7 +21,7 @@ import java.util.logging.Logger;
 import static com.wurmonline.server.items.ItemList.*;
 import static com.wurmonline.server.skills.SkillList.*;
 
-public class Snapper implements ModCreature, CreatureTypes, ItemMaterials, SoundNames {
+public class AngryGoose implements ModCreature, CreatureTypes, ItemMaterials, SoundNames {
     private int templateId;
     private static final Logger LOGGER = Logger.getLogger(Initiator.class.getName());
 
@@ -39,16 +41,16 @@ public class Snapper implements ModCreature, CreatureTypes, ItemMaterials, Sound
                 C_MOD_SIZESMALL,
                 C_TYPE_STEALTH};
 
-        final int[] itemsButchered = {meat, tallow, eye,heart,turtleShell};
+        final int[] itemsButchered = {meat, tallow, eye};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
-                "mod.creature.snapper","Snapper",
-                "Powerful jaw capable of bending steel.. ",
-                "model.creature.snapper",
-                types, (byte)3,(short)5, (byte)0, (short)260, (short)60, (short)40,
+                "mod.creature.pheasant","Angry Goose",
+                "Don't look at it right in the eye.. ",
+                "model.creature.humanoid.pheasant",
+                types, (byte)7,(short)3, (byte)0, (short)30, (short)14, (short)50,
 //              TYPE, BodyType, Vision, Sex, CentimetersHigh, CentimetersLong, CentimetersWide
-                DEATH_CROC_SND, DEATH_CROC_SND, HIT_CROC_SND, HIT_CROC_SND,
-                0.5F, 10.0F, 10.0F, 18.0F, 0.0F, 0.0F, 0.5F, 1500, itemsButchered, 10, 94, MATERIAL_MEAT_SEAFOOD
+                DEATH_PHEASANT_SND, DEATH_PHEASANT_SND, HIT_PHEASANT_SND, HIT_PHEASANT_SND,
+                1.0F, 1.0F, 0.0F, 1.5F, 0.0F, 0.0F, 1.0F, 1500, itemsButchered, 50, 100, MATERIAL_MEAT_FOWL
         );
 
 
@@ -60,20 +62,24 @@ public class Snapper implements ModCreature, CreatureTypes, ItemMaterials, Sound
         builder.skill(MIND_SPEED, 25.0F);
         builder.skill(SOUL_STRENGTH, 26.0F);
         builder.skill(SOUL_DEPTH, 37.0F);
-        builder.skill(WEAPONLESS_FIGHTING, 35.0F);
+        builder.skill(WEAPONLESS_FIGHTING, 25.0F);
+        builder.skill(FIGHT_AGGRESSIVESTYLE, 25.0F);
         builder.alignment(-40.0F);
         builder.combatDamageType(Wound.TYPE_BITE);
         builder.maxPercentOfCreatures(0.02F);
-        builder.handDamString("claw");
+        builder.handDamString("foot slap");
         builder.maxAge(100);
-        builder.armourType(ArmourTemplate.ARMOUR_TYPE_PLATE);
-        builder.baseCombatRating(30.0f);
-        builder.maxGroupAttackSize(6);
+        builder.armourType(ArmourTemplate.ARMOUR_TYPE_LEATHER);
+        builder.baseCombatRating(10.0f);
+        builder.maxGroupAttackSize(4);
         builder.hasHands(false);
         builder.maxPercentOfCreatures(0.01f);
-        builder.setCombatMoves(new int[]{CombatMove.FIGHTDEFEND});
+        builder.setCombatMoves(new int[]{CombatMove.FIGHTAGG});
+        builder.addPrimaryAttack(new AttackAction("flap", AttackIdentifier.MAUL, new AttackValues(12.0F, 0.04F, 4.0F, 3, 1, (byte)0, false, 3, 1.4F)));
+        builder.addSecondaryAttack(new AttackAction("kick", AttackIdentifier.KICK, new AttackValues(4.0F, 0.04F, 5.0F, 3, 1, (byte)0, false, 3, 2.1F)));
+        builder.addSecondaryAttack(new AttackAction("bite", AttackIdentifier.BITE, new AttackValues(10.0F, 0.08F, 7.0F, 3, 1, (byte)3, false, 3, 2.0F)));
 
-        LOGGER.info("Initiator: Snapper");
+        LOGGER.info("Initiator: Angry Goose");
         return builder;
     }
 
@@ -81,7 +87,10 @@ public class Snapper implements ModCreature, CreatureTypes, ItemMaterials, Sound
     public void addEncounters() {
         if (templateId == 0)
             return;
-        if (Constants.SpawnSnapper) {
+        if (Constants.SpawnAngryGoose) {
+            new EncounterBuilder(Tiles.Tile.TILE_GRASS.id)
+                    .addCreatures(templateId, 1)
+                    .build(1);
             new EncounterBuilder(Tiles.Tile.TILE_SAND.id)
                     .addCreatures(templateId, 1)
                     .build(1);
@@ -97,13 +106,4 @@ public class Snapper implements ModCreature, CreatureTypes, ItemMaterials, Sound
         }
 
     }
-
-//    private void getBaseTemplate() {
-//        try {
-//            CreatureTemplate baseTemplate = CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_CID);
-//            this.baseSkillTree = baseTemplate.getSkills().getSkillTree();
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 }

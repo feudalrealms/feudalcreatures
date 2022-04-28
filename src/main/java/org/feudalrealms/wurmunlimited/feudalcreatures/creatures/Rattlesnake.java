@@ -31,11 +31,10 @@ public class Rattlesnake implements ModCreature, CreatureTypes,ItemMaterials, So
                 C_TYPE_HUNTING,
                 C_TYPE_CARNIVORE,
                 C_TYPE_NON_NEWBIE,
-                C_TYPE_MOVE_LOCAL,
                 C_TYPE_DETECTINVIS,
                 C_TYPE_STEALTH};
 
-        final int[] itemsButchered = {leather,eye,tooth};
+        final int[] itemsButchered = {eye, meat};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
                 "mod.creature.rattlesnake","Rattlesnake",

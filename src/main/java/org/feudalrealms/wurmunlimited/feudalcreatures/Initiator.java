@@ -16,14 +16,20 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
 
     @Override
     public void configure(Properties properties) {
-        //facades
-        Constants.SpawnTrollWitchDooctor = Boolean.parseBoolean(properties.getProperty("SpawnTrollWitchDooctor", Boolean.toString(Constants.SpawnTrollWitchDooctor)));
+
+        Constants.SpawnTrollWitchDoctor = Boolean.parseBoolean(properties.getProperty("SpawnTrollWitchDoctor", Boolean.toString(Constants.SpawnTrollWitchDoctor)));
         Constants.SpawnGoblinBrute = Boolean.parseBoolean(properties.getProperty("SpawnGoblinBrute", Boolean.toString(Constants.SpawnGoblinBrute)));
         Constants.SpawnGoblinPirate = Boolean.parseBoolean(properties.getProperty("SpawnGoblinPirate", Boolean.toString(Constants.SpawnGoblinPirate)));
         Constants.SpawnRattlesnake = Boolean.parseBoolean(properties.getProperty("SpawnRattlesnake", Boolean.toString(Constants.SpawnRattlesnake)));
-        Constants.SpawnPixie = Boolean.parseBoolean(properties.getProperty("SpawnPixie", Boolean.toString(Constants.SpawnPixie)));
         Constants.SpawnBrigand = Boolean.parseBoolean(properties.getProperty("SpawnBrigand", Boolean.toString(Constants.SpawnBrigand)));
         Constants.SpawnSnapper = Boolean.parseBoolean(properties.getProperty("SpawnSnapper", Boolean.toString(Constants.SpawnSnapper)));
+        Constants.SpawnMegaCrab = Boolean.parseBoolean(properties.getProperty("SpawnMegaCrab", Boolean.toString(Constants.SpawnMegaCrab)));
+
+        Constants.SpawnAngryGoose = Boolean.parseBoolean(properties.getProperty("SpawnAngryGoose", Boolean.toString(Constants.SpawnAngryGoose)));
+        Constants.SpawnKraken = Boolean.parseBoolean(properties.getProperty("SpawnKraken", Boolean.toString(Constants.SpawnKraken)));
+
+
+
     }
 
 
@@ -38,8 +44,9 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
             ModCreatures.addCreature((ModCreature) new Rattlesnake());
             ModCreatures.addCreature((ModCreature) new Brigand());
             ModCreatures.addCreature((ModCreature) new Snapper());
-           // ModCreatures.addCreature((ModCreature) new Pixie());
-
+            ModCreatures.addCreature((ModCreature) new MegaCrab());
+            ModCreatures.addCreature((ModCreature) new AngryGoose());
+ //           ModCreatures.addCreature((ModCreature) new Kraken());
         } catch (Throwable throwable) {
             LOGGER.severe("Error In Initializing");
         }
