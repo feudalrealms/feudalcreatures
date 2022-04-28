@@ -42,7 +42,7 @@ icon.model.creature.angrygoose        = creatures/fr/angrygoose/Icon_Pheasant.pn
 
 #  Kraken ----------------------------------------------------------
 
-model.creature.kraken             = creatures/fr/kraken/Pheasant_main.dae?pheasantMat.texture=AngryGoose.png
-model.corpse.kraken               = creatures/fr/kraken/Pheasant_corpse.dae?pheasantMat.texture=AngryGoose.png
-model.corpse.kraken.butchered     = creatures/fr/butcheredgen/butcheredGeneric1.dae
-icon.model.creature.kraken        = creatures/fr/kraken/Icon_Pheasant.png
+model.creature.kraken             = creatures/fr/kraken/Octopus_main.dae?OctopusMat.texture=Kraken.png
+model.corpse.kraken               = creatures/fr/kraken/Octopus_corpse.dae?OctopusMat.texture=Kraken.png
+model.corpse.kraken.butchered     = creatures/fr/kraken/OctopusPile.dae
+icon.model.creature.kraken        = creatures/fr/kraken/Icon_Octopus.png

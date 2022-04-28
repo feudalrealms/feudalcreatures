@@ -78,7 +78,7 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
         builder.baseCombatRating(30.0f);
         builder.maxGroupAttackSize(20);
         builder.hasHands(false);
-        builder.offZ(-1.4F);
+        builder.offZ(-2F);
         builder.maxPopulationOfCreatures(3);
         builder.setCombatMoves(new int[]{CombatMove.FIGHTNORMAL, CombatMove.THROW});
         builder.sizeModifier(200,200,200);
