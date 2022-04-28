@@ -46,7 +46,7 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
             ModCreatures.addCreature((ModCreature) new Snapper());
             ModCreatures.addCreature((ModCreature) new MegaCrab());
             ModCreatures.addCreature((ModCreature) new AngryGoose());
- //           ModCreatures.addCreature((ModCreature) new Kraken());
+            ModCreatures.addCreature((ModCreature) new Kraken());
         } catch (Throwable throwable) {
             LOGGER.severe("Error In Initializing");
         }
