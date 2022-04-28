@@ -54,6 +54,7 @@ public class AngryGoose implements ModCreature, CreatureTypes, ItemMaterials, So
         );
 
 
+
         this.templateId = builder.getTemplateId();
         builder.skill(BODY_STRENGTH, 25.0F);
         builder.skill(BODY_CONTROL, 25.0F);

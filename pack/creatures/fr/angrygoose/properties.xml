@@ -1,0 +1,68 @@
+<properties>	
+		<Pheasant_main.dae>
+			<modelProperties>
+				<numberOfExtraIdleAnimations>2</numberOfExtraIdleAnimations>
+			</modelProperties>
+			<anim>
+				<idle>
+					<file>anim/Pheasant_Idle0.dae</file>
+					<addToPeriodic/>
+				</idle>
+				<idle0>
+					<file>anim/Pheasant_Idle1.dae</file>		
+				</idle0>
+				<idle1>
+					<file>anim/Pheasant_Idle2.dae</file>		
+				</idle1>
+				<walk>
+					<file>anim/Pheasant_Walk.dae</file>
+					<addToPeriodic/>
+				</walk>
+				<run>
+					<file>anim/Pheasant_Run.dae</file>
+					<addToPeriodic/>
+				</run>
+				<ready>
+					<file>anim/Pheasant_ReadyStance.dae</file>
+					<addToPeriodic/>
+				</ready>
+				
+				<fight_strike>
+					<file>anim/Pheasant_Attack0.dae</file>		
+				</fight_strike>
+				
+				<fight_claw>
+					<file>anim/Pheasant_Attack1.dae</file>		
+				</fight_claw>
+				
+				<fight_bite>
+					<file>anim/Pheasant_Attack0.dae</file>		
+				</fight_bite>
+				
+				<wounded>
+					<file>anim/Pheasant_Wounded.dae</file>
+					<effect>
+						<featherP01>
+							<nullName>Blend</nullName>
+							<time>0.1</time>
+						</featherP01>
+					</effect>
+				</wounded>
+				
+				<die>
+					<file>anim/Pheasant_Die.dae</file>
+					<effect>
+						<bloodEffectSmall>
+							<nullName>Blend</nullName>
+							<time>0.1</time>
+						</bloodEffectSmall>
+					</effect>		
+				</die>
+				<dodge>
+					<file>anim/Pheasant_Dodge.dae</file>		
+				</dodge>
+			</anim>
+			
+	
+		</Pheasant_main.dae>
+</properties>
