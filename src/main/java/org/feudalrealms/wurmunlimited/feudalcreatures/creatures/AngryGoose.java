@@ -44,9 +44,9 @@ public class AngryGoose implements ModCreature, CreatureTypes, ItemMaterials, So
         final int[] itemsButchered = {meat, tallow, eye};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
-                "mod.creature.pheasant","Angry Goose",
+                "mod.creature.angrygoose","Angry Goose",
                 "Don't look at it right in the eye.. ",
-                "model.creature.humanoid.pheasant",
+                "model.creature.angrygoose",
                 types, (byte)7,(short)3, (byte)0, (short)30, (short)14, (short)50,
 //              TYPE, BodyType, Vision, Sex, CentimetersHigh, CentimetersLong, CentimetersWide
                 DEATH_PHEASANT_SND, DEATH_PHEASANT_SND, HIT_PHEASANT_SND, HIT_PHEASANT_SND,
