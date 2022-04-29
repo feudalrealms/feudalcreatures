@@ -46,3 +46,10 @@ model.creature.kraken             = creatures/fr/kraken/Octopus_main.dae?Octopus
 model.corpse.kraken               = creatures/fr/kraken/Octopus_corpse.dae?OctopusMat.texture=Kraken.png
 model.corpse.kraken.butchered     = creatures/fr/kraken/OctopusPile.dae
 icon.model.creature.kraken        = creatures/fr/kraken/Icon_Octopus.png
+
+#  MegaCrab ----------------------------------------------------------
+
+model.creature.megacrab             = creatures/fr/megacrab/Crab_main.dae?crabMat.texture=MegaCrab.png
+model.corpse.megacrab               = creatures/fr/megacrab/Crab_corpse.dae?BeachCrabMat.texture=MegaCrab.png
+model.corpse.megacrab.butchered     = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.megacrab        = creatures/fr/megacrab/Icon_Crab.png

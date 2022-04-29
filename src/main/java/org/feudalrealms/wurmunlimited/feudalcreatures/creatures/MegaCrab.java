@@ -45,9 +45,9 @@ public class MegaCrab implements ModCreature, CreatureTypes, ItemMaterials, Soun
         final int[] itemsButchered = {crabMeat,crabMeat,crabMeat,crabMeat, eye,eye};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
-                "mod.creature.crab","Mega Crab",
+                "mod.creature.megacrab","Mega Crab",
                 "Powerful jaw capable of bending steel.. ",
-                "model.creature.quadraped.crab",
+                "model.creature.megacrab",
 //                types, (byte)3,(short)10, (byte)0, (short)520, (short)120, (short)80,
                 types, (byte)3,(short)10, (byte)0, (short)1040, (short)240, (short)160,
 //              TYPE, BodyType, Vision, Sex, CentimetersHigh, CentimetersLong, CentimetersWide

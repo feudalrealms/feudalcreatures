@@ -76,7 +76,7 @@ public class GoblinPirate implements ModCreature, CreatureTypes, ItemMaterials, 
         builder.combatDamageType((byte) 1);
         builder.maxGroupAttackSize(6);
         builder.hasHands(true);
-        builder.maxPercentOfCreatures(0.02f);
+        builder.maxPercentOfCreatures(0.015f);
         builder.setCombatMoves(new int[]{CombatMove.STUN, CombatMove.FIGHTDEFEND, CombatMove.SWEEP});
 
         LOGGER.info("Initiator: GoblinPirate");
@@ -107,12 +107,4 @@ public class GoblinPirate implements ModCreature, CreatureTypes, ItemMaterials, 
 
     }
 
-//    private void getBaseTemplate() {
-//        try {
-//            CreatureTemplate baseTemplate = CreatureTemplateFactory.getInstance().getTemplate(CreatureTemplateIds.GOBLIN_CID);
-//            this.baseSkillTree = baseTemplate.getSkills().getSkillTree();
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 }

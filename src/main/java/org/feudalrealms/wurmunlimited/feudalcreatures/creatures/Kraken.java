@@ -43,6 +43,7 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
                 C_TYPE_SUBMERGED,
                 C_TYPE_MISSION_OK,
                 C_TYPE_MISSION_TRAITOR_OK,
+                C_TYPE_FENCEBREAKER,
                 C_TYPE_NO_REBIRTH,
                 C_TYPE_STEALTH};
         //     int[] types = new int[]{8, 38, 13, 16, 29, 44, 48, 37, 60, 61};
@@ -58,7 +59,7 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
                 types, (byte)9,(short)30, (byte)0, (short)2600, (short)600, (short)400,
 //              TYPE, BodyType, Vision, Sex, CentimetersHigh, CentimetersLong, CentimetersWide
                 DEATH_SNAKE_SND, DEATH_SNAKE_SND, HIT_SNAKE_SND, HIT_SNAKE_SND,
-                0.5F, 10.0F, 10.0F, 18.0F, 0.0F, 0.0F, 0.8F, 1500, itemsButchered, 50, 94, MATERIAL_MEAT_SEAFOOD
+                0.5F, 10.0F, 10.0F, 18.0F, 0.0F, 0.0F, 0.6F, 1500, itemsButchered, 50, 94, MATERIAL_MEAT_SEAFOOD
         );
 
 
@@ -72,16 +73,19 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
         builder.skill(SOUL_DEPTH, 50.0F);
         builder.skill(WEAPONLESS_FIGHTING, 85.0F);
         builder.alignment(-99.0F);
-        builder.combatDamageType(Wound.TYPE_BITE);
+        builder.combatDamageType(Wound.TYPE_SLASH);
         builder.maxAge(100);
         builder.armourType(ArmourTemplate.ARMOUR_TYPE_PLATE);
-        builder.baseCombatRating(30.0f);
+        builder.baseCombatRating(60.0f);
         builder.maxGroupAttackSize(20);
         builder.hasHands(false);
-        builder.offZ(-2F);
+        builder.offZ(-1F);
         builder.maxPopulationOfCreatures(3);
-        builder.setCombatMoves(new int[]{CombatMove.FIGHTNORMAL, CombatMove.THROW});
+        builder.setCombatMoves(new int[]{CombatMove.FIGHTAGG, CombatMove.THROW, CombatMove.SWEEP});
         builder.sizeModifier(200,200,200);
+        builder.addPrimaryAttack(new AttackAction("strike", AttackIdentifier.STRIKE, new AttackValues(12.0F, 0.04F, 4.0F, 6, 1, (byte)0, false, 3, 1.4F)));
+        builder.addSecondaryAttack(new AttackAction("slap", AttackIdentifier.KICK, new AttackValues(4.0F, 0.04F, 5.0F, 6, 1, (byte)0, false, 3, 2.1F)));
+        builder.addSecondaryAttack(new AttackAction("bite", AttackIdentifier.BITE, new AttackValues(20.0F, 0.08F, 7.0F, 6, 1, (byte)3, false, 3, 2.0F)));
 
         LOGGER.info("Initiator: Kraken");
         return builder;
@@ -96,6 +100,7 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
             new EncounterBuilder(Tiles.Tile.TILE_KELP.id)
                     .addCreatures(templateId, 1)
                     .build(1);
+
         }
 
     }
