@@ -47,10 +47,10 @@ public class AngryGoose implements ModCreature, CreatureTypes, ItemMaterials, So
                 "mod.creature.angrygoose","Angry Goose",
                 "Don't look at it right in the eye.. ",
                 "model.creature.angrygoose",
-                types, (byte)7,(short)3, (byte)0, (short)30, (short)14, (short)50,
+                types, (byte)7,(short)6, (byte)0, (short)30, (short)14, (short)50,
 //              TYPE, BodyType, Vision, Sex, CentimetersHigh, CentimetersLong, CentimetersWide
                 DEATH_PHEASANT_SND, DEATH_PHEASANT_SND, HIT_PHEASANT_SND, HIT_PHEASANT_SND,
-                1.0F, 1.0F, 0.0F, 1.5F, 0.0F, 0.0F, 1.0F, 1500, itemsButchered, 50, 100, MATERIAL_MEAT_FOWL
+                1.0F, 1.0F, 0.0F, 1.5F, 0.0F, 0.0F, 1.0F, 1500, itemsButchered, 20, 99, MATERIAL_MEAT_FOWL
         );
 
 

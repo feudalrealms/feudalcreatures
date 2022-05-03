@@ -32,7 +32,6 @@ public class Snapper implements ModCreature, CreatureTypes, ItemMaterials, Sound
                 C_TYPE_MOVE_GLOBAL,
                 C_TYPE_ANIMAL,
                 C_TYPE_AGG_HUMAN,
-                C_TYPE_HUNTING,
                 C_TYPE_CARNIVORE,
                 C_TYPE_NON_NEWBIE,
                 C_TYPE_DETECTINVIS,

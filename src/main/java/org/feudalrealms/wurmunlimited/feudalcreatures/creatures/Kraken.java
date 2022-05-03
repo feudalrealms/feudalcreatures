@@ -34,7 +34,6 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
                 C_TYPE_MOVE_GLOBAL,
                 C_TYPE_MONSTER,
                 C_TYPE_AGG_HUMAN,
-                C_TYPE_HUNTING,
                 C_TYPE_CARNIVORE,
                 C_TYPE_NON_NEWBIE,
                 C_TYPE_UNIQUE,
@@ -56,10 +55,10 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
                 "mod.creature.kraken","Kraken",
                 "Larger specimen, like this one, have been known to pull whole ships down into the abyss.",
                 "model.creature.kraken",
-                types, (byte)9,(short)30, (byte)0, (short)2600, (short)600, (short)400,
+                types, (byte)9,(short)15, (byte)0, (short)2600, (short)600, (short)400,
 //              TYPE, BodyType, Vision, Sex, CentimetersHigh, CentimetersLong, CentimetersWide
                 DEATH_SNAKE_SND, DEATH_SNAKE_SND, HIT_SNAKE_SND, HIT_SNAKE_SND,
-                0.5F, 10.0F, 10.0F, 18.0F, 0.0F, 0.0F, 0.6F, 1500, itemsButchered, 50, 94, MATERIAL_MEAT_SEAFOOD
+                0.5F, 10.0F, 10.0F, 18.0F, 0.0F, 0.0F, 0.6F, 1500, itemsButchered, 20, 94, MATERIAL_MEAT_SEAFOOD
         );
 
 
