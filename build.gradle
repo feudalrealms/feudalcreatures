@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.gotti.wurmunlimited:server-modlauncher:0.45'
+    implementation 'org.gotti.wurmunlimited:server-modlauncher:0.43'
 }
 
 jar {

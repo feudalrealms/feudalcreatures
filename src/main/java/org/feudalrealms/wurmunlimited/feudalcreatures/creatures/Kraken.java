@@ -58,18 +58,18 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
                 types, (byte)9,(short)15, (byte)0, (short)2600, (short)600, (short)400,
 //              TYPE, BodyType, Vision, Sex, CentimetersHigh, CentimetersLong, CentimetersWide
                 DEATH_SNAKE_SND, DEATH_SNAKE_SND, HIT_SNAKE_SND, HIT_SNAKE_SND,
-                0.5F, 10.0F, 10.0F, 18.0F, 0.0F, 0.0F, 0.6F, 1500, itemsButchered, 20, 94, MATERIAL_MEAT_SEAFOOD
+                0.3F, 15.0F, 15.0F, 28.0F, 0.0F, 0.0F, 0.6F, 1500, itemsButchered, 20, 94, MATERIAL_MEAT_SEAFOOD
         );
 
 
         this.templateId = builder.getTemplateId();
-        builder.skill(BODY_STRENGTH, 50.0F);
-        builder.skill(BODY_CONTROL, 50.0F);
-        builder.skill(BODY_STAMINA, 50.0F);
-        builder.skill(MIND_LOGICAL, 50.0F);
-        builder.skill(MIND_SPEED, 50.0F);
-        builder.skill(SOUL_STRENGTH, 50.0F);
-        builder.skill(SOUL_DEPTH, 50.0F);
+        builder.skill(BODY_STRENGTH, 80.0F);
+        builder.skill(BODY_CONTROL, 80.0F);
+        builder.skill(BODY_STAMINA, 80.0F);
+        builder.skill(MIND_LOGICAL, 60.0F);
+        builder.skill(MIND_SPEED, 60.0F);
+        builder.skill(SOUL_STRENGTH, 60.0F);
+        builder.skill(SOUL_DEPTH, 60.0F);
         builder.skill(WEAPONLESS_FIGHTING, 85.0F);
         builder.alignment(-99.0F);
         builder.combatDamageType(Wound.TYPE_SLASH);
@@ -82,9 +82,9 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
         builder.maxPopulationOfCreatures(3);
         builder.setCombatMoves(new int[]{CombatMove.FIGHTAGG, CombatMove.THROW, CombatMove.SWEEP});
         builder.sizeModifier(200,200,200);
-        builder.addPrimaryAttack(new AttackAction("strike", AttackIdentifier.STRIKE, new AttackValues(12.0F, 0.04F, 4.0F, 6, 1, (byte)0, false, 3, 1.4F)));
-        builder.addSecondaryAttack(new AttackAction("slap", AttackIdentifier.KICK, new AttackValues(4.0F, 0.04F, 5.0F, 6, 1, (byte)0, false, 3, 2.1F)));
-        builder.addSecondaryAttack(new AttackAction("bite", AttackIdentifier.BITE, new AttackValues(20.0F, 0.08F, 7.0F, 6, 1, (byte)3, false, 3, 2.0F)));
+        builder.addPrimaryAttack(new AttackAction("strike", AttackIdentifier.STRIKE, new AttackValues(15.0F, 0.04F, 4.0F, 6, 1, (byte)0, false, 3, 1.4F)));
+        builder.addSecondaryAttack(new AttackAction("slap", AttackIdentifier.KICK, new AttackValues(15.0F, 0.04F, 5.0F, 6, 1, (byte)0, false, 3, 2.1F)));
+        builder.addSecondaryAttack(new AttackAction("bite", AttackIdentifier.BITE, new AttackValues(28.0F, 0.08F, 7.0F, 6, 1, (byte)3, false, 3, 2.0F)));
 
         LOGGER.info("Initiator: Kraken");
         return builder;
