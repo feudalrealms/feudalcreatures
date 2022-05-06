@@ -30,14 +30,14 @@ public class Slime implements ModCreature, CreatureTypes, ItemMaterials, SoundNa
 
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
 
-        int[] types = { C_TYPE_MOVE_GLOBAL,C_TYPE_MONSTER,C_TYPE_AGG_HUMAN,C_TYPE_SWIMMING,C_TYPE_CARNIVORE,C_TYPE_NON_NEWBIE };
+        int[] types = { C_TYPE_MOVE_GLOBAL,C_TYPE_MONSTER,C_TYPE_AGG_HUMAN,C_TYPE_SWIMMING,C_TYPE_CARNIVORE,C_TYPE_NON_NEWBIE,C_TYPE_HUNTING };
         final int[] itemsButchered = {eye,skull,tar};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
                 "mod.creature.slime","Slime",
                 "Squish squish",
                 "model.creature.slime",
-                types,BodyTemplate.TYPE_SNAKE, (short)6, (byte)0, (short)200, (short)100, (short)100,
+                types,BodyTemplate.TYPE_SPIDER, (short)6, (byte)0, (short)400, (short)400, (short)400,
                 DEATH_OOZE_SND, DEATH_OOZE_SND, HIT_OOZE_SND, HIT_OOZE_SND,
                 0.6F, 8.0F, 0.0F, 8.0F, 0.0F, 0.0F, 1.2F, 1700, itemsButchered, 10, 99, MATERIAL_MEAT_INSECT
         );
@@ -53,7 +53,7 @@ public class Slime implements ModCreature, CreatureTypes, ItemMaterials, SoundNa
         builder.skill(SOUL_DEPTH, 12.0F);
         builder.skill(WEAPONLESS_FIGHTING, 50.0f);
         builder.skill(FIGHT_AGGRESSIVESTYLE, 25.0F);
-        builder.alignment(-60.0F);
+        builder.alignment(-90.0F);
         builder.hasHands(false);
         builder.maxAge(100);
         builder.armourType(ArmourTemplate.ARMOUR_TYPE_STUDDED);
@@ -65,7 +65,7 @@ public class Slime implements ModCreature, CreatureTypes, ItemMaterials, SoundNa
         builder.addPrimaryAttack(new AttackAction("flap", AttackIdentifier.MAUL, new AttackValues(12.0F, 0.04F, 4.0F, 3, 1, (byte)0, false, 3, 1.4F)));
         builder.addSecondaryAttack(new AttackAction("spit", AttackIdentifier.BITE, new AttackValues(10.0F, 0.08F, 7.0F, 3, 1, (byte)3, false, 3, 2.0F)));
         builder.maxPercentOfCreatures(0.02f);
-
+        builder.sizeModifier(200,200,200);
         LOGGER.info("Initiator: Slime");
         return builder;
     }
