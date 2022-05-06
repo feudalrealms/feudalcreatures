@@ -31,15 +31,15 @@ public class Slime implements ModCreature, CreatureTypes, ItemMaterials, SoundNa
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
 
         int[] types = { C_TYPE_MOVE_GLOBAL,C_TYPE_MONSTER,C_TYPE_AGG_HUMAN,C_TYPE_SWIMMING,C_TYPE_CARNIVORE,C_TYPE_NON_NEWBIE };
-        final int[] itemsButchered = {tar,eye,gland};
+        final int[] itemsButchered = {eye,skull,tar};
 
         CreatureTemplateBuilder builder = new CreatureTemplateBuilder(
                 "mod.creature.slime","Slime",
                 "Squish squish",
                 "model.creature.slime",
-                types,BodyTemplate.TYPE_SNAKE, (short)5, (byte)0, (short)150, (short)50, (short)50,
+                types,BodyTemplate.TYPE_SNAKE, (short)6, (byte)0, (short)200, (short)100, (short)100,
                 DEATH_OOZE_SND, DEATH_OOZE_SND, HIT_OOZE_SND, HIT_OOZE_SND,
-                0.6F, 8.0F, 0.0F, 8.0F, 0.0F, 0.0F, 1.2F, 1700, itemsButchered, 10, 99, (byte)81
+                0.6F, 8.0F, 0.0F, 8.0F, 0.0F, 0.0F, 1.2F, 1700, itemsButchered, 10, 99, MATERIAL_MEAT_INSECT
         );
 
         builder.description("Squish squish");
