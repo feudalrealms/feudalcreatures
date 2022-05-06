@@ -1,0 +1,26 @@
+<properties>
+	<Blob_Main.dae>
+		<anim>
+			<idle>
+				<file>anim/Blob_Idle0_bp.dae</file>
+				<addToPeriodic/>				
+			</idle>
+			<walk>
+				<file>anim/Blob_Walk_bp.dae</file>
+				<addToPeriodic/>				
+			</walk>	
+			<die>
+				<file>anim/Blob_Die_bp.dae</file>
+					<effect>
+						<insectHitBlood>
+							<nullName>Root</nullName>
+							<time>0.2</time>
+						</insectHitBlood>
+					</effect>			
+			</die>
+			<fight_strike>
+				<file>anim/Blob_Attack0_bp.dae</file>		
+			</fight_strike>
+		</anim>
+	</Blob_Main.dae>
+</properties>

@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
 group "org.feudalrealms.wurmunlimited"
-version "1.4"
+version "1.5"
 
 
 repositories {

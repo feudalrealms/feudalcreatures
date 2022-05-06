@@ -10,4 +10,5 @@ public class Constants {
     public static boolean SpawnMegaCrab;
     public static boolean SpawnAngryGoose;
     public static boolean SpawnKraken;
+    public static boolean SpawnSlime;
 }

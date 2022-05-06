@@ -7,49 +7,56 @@ icon.model.creature.trollwitchdoctor        = creatures/fr/witchdoctor/Icon_Trol
 
 #  Goblin Brute ----------------------------------------------------------
 
-model.creature.goblinbrute          	= creatures/fr/goblinbrute/Goblin_main.wom?goblinMat.texture=GoblinBrute.dds
-model.corpse.goblinbrute           		= creatures/fr/goblinbrute/Goblin_Corpse.wom?goblinMat.texture=GoblinBrute.dds
-model.corpse.goblinbrute.butchered      = creatures/fr/butcheredgen/butcheredGeneric1.dae
-icon.model.creature.goblinbrute        = creatures/fr/goblinbrute/Icon_Goblin.png
+model.creature.goblinbrute          	    = creatures/fr/goblinbrute/Goblin_main.wom?goblinMat.texture=GoblinBrute.dds
+model.corpse.goblinbrute           		    = creatures/fr/goblinbrute/Goblin_Corpse.wom?goblinMat.texture=GoblinBrute.dds
+model.corpse.goblinbrute.butchered          = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.goblinbrute             = creatures/fr/goblinbrute/Icon_Goblin.png
 
 #  Goblin Pirate ----------------------------------------------------------
 
-model.creature.goblinpirate          	= creatures/fr/goblinpirate/Goblin_main.wom?goblinMat.texture=GoblinPirate.dds
-model.corpse.goblinpirate           	= creatures/fr/goblinpirate/Goblin_Corpse.wom?goblinMat.texture=GoblinPirate.dds
-model.corpse.goblinpirate.butchered     = creatures/fr/butcheredgen/butcheredGeneric1.dae
-icon.model.creature.goblinpirate        = creatures/fr/goblinpirate/Icon_Goblin.png
+model.creature.goblinpirate          	    = creatures/fr/goblinpirate/Goblin_main.wom?goblinMat.texture=GoblinPirate.dds
+model.corpse.goblinpirate           	    = creatures/fr/goblinpirate/Goblin_Corpse.wom?goblinMat.texture=GoblinPirate.dds
+model.corpse.goblinpirate.butchered         = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.goblinpirate            = creatures/fr/goblinpirate/Icon_Goblin.png
 
 #  RattleSnake ---------------------------------------------------------------------------------------
 
-model.creature.rattlesnake          	= creatures/fr/rattlesnake/Anaconda_main.wom?AnacondaMat.texture=Rattlesnake.dds
-model.corpse.rattlesnake            	= creatures/fr/rattlesnake/Anaconda_Corpse.wom?AnacondaMat.texture=Rattlesnake.dds
-model.corpse.rattlesnake.butchered      = creatures/fr/butcheredgen/butcheredGeneric1.dae
-icon.model.creature.rattlesnake         = creatures/fr/rattlesnake/Icon_Anaconda.png
+model.creature.rattlesnake          	    = creatures/fr/rattlesnake/Anaconda_main.wom?AnacondaMat.texture=Rattlesnake.dds
+model.corpse.rattlesnake            	    = creatures/fr/rattlesnake/Anaconda_Corpse.wom?AnacondaMat.texture=Rattlesnake.dds
+model.corpse.rattlesnake.butchered          = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.rattlesnake             = creatures/fr/rattlesnake/Icon_Anaconda.png
 
 #  Snapper ----------------------------------------------------------
 
-model.creature.snapper          	= creatures/fr/snapper/Tortoise_main.dae?tortoiseMat.texture=snapper.png
-model.corpse.snapper           		= creatures/fr/snapper/Tortoise_corpse.dae?tortoiseMat.texture=snapper.png
-model.corpse.snapper.butchered      = creatures/fr/butcheredgen/butcheredGeneric1.dae
-icon.model.creature.snapper         = creatures/fr/snapper/Icon_Tortoise.png
+model.creature.snapper          	        = creatures/fr/snapper/Tortoise_main.dae?tortoiseMat.texture=snapper.png
+model.corpse.snapper           		        = creatures/fr/snapper/Tortoise_corpse.dae?tortoiseMat.texture=snapper.png
+model.corpse.snapper.butchered              = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.snapper                 = creatures/fr/snapper/Icon_Tortoise.png
 
 #  AngryGoose ----------------------------------------------------------
 
-model.creature.angrygoose             = creatures/fr/angrygoose/Pheasant_main.dae?pheasantMat.texture=AngryGoose.png
-model.corpse.angrygoose               = creatures/fr/angrygoose/Pheasant_corpse.dae?pheasantMat.texture=AngryGoose.png
-model.corpse.angrygoose.butchered     = creatures/fr/butcheredgen/butcheredGeneric1.dae
-icon.model.creature.angrygoose        = creatures/fr/angrygoose/Icon_Pheasant.png
+model.creature.angrygoose                   = creatures/fr/angrygoose/Pheasant_main.dae?pheasantMat.texture=AngryGoose.png
+model.corpse.angrygoose                     = creatures/fr/angrygoose/Pheasant_corpse.dae?pheasantMat.texture=AngryGoose.png
+model.corpse.angrygoose.butchered           = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.angrygoose              = creatures/fr/angrygoose/Icon_Pheasant.png
 
 #  Kraken ----------------------------------------------------------
 
-model.creature.kraken             = creatures/fr/kraken/Octopus_main.dae?OctopusMat.texture=Kraken.png
-model.corpse.kraken               = creatures/fr/kraken/Octopus_corpse.dae?OctopusMat.texture=Kraken.png
-model.corpse.kraken.butchered     = creatures/fr/kraken/OctopusPile.dae
-icon.model.creature.kraken        = creatures/fr/kraken/Icon_Octopus.png
+model.creature.kraken                       = creatures/fr/kraken/Octopus_main.dae?OctopusMat.texture=Kraken.png
+model.corpse.kraken                         = creatures/fr/kraken/Octopus_corpse.dae?OctopusMat.texture=Kraken.png
+model.corpse.kraken.butchered               = creatures/fr/kraken/OctopusPile.dae
+icon.model.creature.kraken                  = creatures/fr/kraken/Icon_Octopus.png
 
 #  MegaCrab ----------------------------------------------------------
 
-model.creature.megacrab             = creatures/fr/megacrab/Crab_main.dae?crabMat.texture=MegaCrab.png
-model.corpse.megacrab               = creatures/fr/megacrab/Crab_corpse.dae?BeachCrabMat.texture=MegaCrab.png
-model.corpse.megacrab.butchered     = creatures/fr/butcheredgen/butcheredGeneric1.dae
-icon.model.creature.megacrab        = creatures/fr/megacrab/Icon_Crab.png
+model.creature.megacrab                     = creatures/fr/megacrab/Crab_main.dae?crabMat.texture=MegaCrab.png
+model.corpse.megacrab                       = creatures/fr/megacrab/Crab_corpse.dae?BeachCrabMat.texture=MegaCrab.png
+model.corpse.megacrab.butchered             = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.megacrab                = creatures/fr/megacrab/Icon_Crab.png
+
+#  Slime
+
+model.creature.slime 			            = creatures/fr/slime/Blob_Main.dae?BlobMat.texture=slime.png
+model.corpse.slime  		                = creatures/fr/slime/Blob_corpse.dae?BlobMat.texture=slime.png
+model.corpse.slime.butchered  	            = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.slime                   = creatures/fr/slime/slime.png

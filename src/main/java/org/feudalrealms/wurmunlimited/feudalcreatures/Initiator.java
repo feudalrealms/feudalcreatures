@@ -24,10 +24,9 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
         Constants.SpawnBrigand = Boolean.parseBoolean(properties.getProperty("SpawnBrigand", Boolean.toString(Constants.SpawnBrigand)));
         Constants.SpawnSnapper = Boolean.parseBoolean(properties.getProperty("SpawnSnapper", Boolean.toString(Constants.SpawnSnapper)));
         Constants.SpawnMegaCrab = Boolean.parseBoolean(properties.getProperty("SpawnMegaCrab", Boolean.toString(Constants.SpawnMegaCrab)));
-
         Constants.SpawnAngryGoose = Boolean.parseBoolean(properties.getProperty("SpawnAngryGoose", Boolean.toString(Constants.SpawnAngryGoose)));
         Constants.SpawnKraken = Boolean.parseBoolean(properties.getProperty("SpawnKraken", Boolean.toString(Constants.SpawnKraken)));
-
+        Constants.SpawnSlime = Boolean.parseBoolean(properties.getProperty("SpawnSlime", Boolean.toString(Constants.SpawnSlime)));
 
 
     }
@@ -47,6 +46,7 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
             ModCreatures.addCreature((ModCreature) new MegaCrab());
             ModCreatures.addCreature((ModCreature) new AngryGoose());
             ModCreatures.addCreature((ModCreature) new Kraken());
+            ModCreatures.addCreature((ModCreature) new Slime());
         } catch (Throwable throwable) {
             LOGGER.severe("Error In Initializing");
         }
