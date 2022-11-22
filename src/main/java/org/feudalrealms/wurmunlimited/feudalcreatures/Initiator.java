@@ -2,7 +2,6 @@ package org.feudalrealms.wurmunlimited.feudalcreatures;
 
 import org.gotti.wurmunlimited.modloader.interfaces.*;
 import org.gotti.wurmunlimited.modsupport.creatures.ModCreatures;
-import org.gotti.wurmunlimited.modsupport.creatures.ModCreature;
 import org.feudalrealms.wurmunlimited.feudalcreatures.creatures.*;
 
 import java.util.Properties;
@@ -27,6 +26,7 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
         Constants.SpawnAngryGoose = Boolean.parseBoolean(properties.getProperty("SpawnAngryGoose", Boolean.toString(Constants.SpawnAngryGoose)));
         Constants.SpawnKraken = Boolean.parseBoolean(properties.getProperty("SpawnKraken", Boolean.toString(Constants.SpawnKraken)));
         Constants.SpawnSlime = Boolean.parseBoolean(properties.getProperty("SpawnSlime", Boolean.toString(Constants.SpawnSlime)));
+        Constants.SpawnMegaGoose = Boolean.parseBoolean(properties.getProperty("SpawnMegaGoose", Boolean.toString(Constants.SpawnMegaGoose)));
 
 
     }
@@ -37,16 +37,17 @@ public class Initiator implements WurmServerMod, Initable, Configurable {
         LOGGER.info("Init called");
         try {
             ModCreatures.init();
-            ModCreatures.addCreature((ModCreature) new TrollWitchDoctor());
-            ModCreatures.addCreature((ModCreature) new GoblinBrute());
-            ModCreatures.addCreature((ModCreature) new GoblinPirate());
-            ModCreatures.addCreature((ModCreature) new Rattlesnake());
-            ModCreatures.addCreature((ModCreature) new Brigand());
-            ModCreatures.addCreature((ModCreature) new Snapper());
-            ModCreatures.addCreature((ModCreature) new MegaCrab());
-            ModCreatures.addCreature((ModCreature) new AngryGoose());
-            ModCreatures.addCreature((ModCreature) new Kraken());
-            ModCreatures.addCreature((ModCreature) new Slime());
+            ModCreatures.addCreature(new TrollWitchDoctor());
+            ModCreatures.addCreature(new GoblinBrute());
+            ModCreatures.addCreature(new GoblinPirate());
+            ModCreatures.addCreature(new Rattlesnake());
+            ModCreatures.addCreature(new Brigand());
+            ModCreatures.addCreature(new Snapper());
+            ModCreatures.addCreature(new MegaCrab());
+            ModCreatures.addCreature(new AngryGoose());
+            ModCreatures.addCreature(new Kraken());
+            ModCreatures.addCreature(new Slime());
+            ModCreatures.addCreature(new MegaGoose());
         } catch (Throwable throwable) {
             LOGGER.severe("Error In Initializing");
         }

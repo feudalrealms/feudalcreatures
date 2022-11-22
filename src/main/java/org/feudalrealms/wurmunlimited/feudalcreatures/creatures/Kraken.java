@@ -58,7 +58,7 @@ public class Kraken implements ModCreature, CreatureTypes, ItemMaterials, SoundN
                 types, (byte)9,(short)15, (byte)0, (short)2600, (short)600, (short)400,
 //              TYPE, BodyType, Vision, Sex, CentimetersHigh, CentimetersLong, CentimetersWide
                 DEATH_SNAKE_SND, DEATH_SNAKE_SND, HIT_SNAKE_SND, HIT_SNAKE_SND,
-                0.3F, 15.0F, 15.0F, 28.0F, 0.0F, 0.0F, 0.6F, 1500, itemsButchered, 20, 94, MATERIAL_MEAT_SEAFOOD
+                0.3F, 15.0F, 15.0F, 28.0F, 5.0F, 0.0F, 0.6F, 1500, itemsButchered, 20, 94, MATERIAL_MEAT_SEAFOOD
         );
 
 

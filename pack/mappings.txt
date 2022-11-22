@@ -40,6 +40,12 @@ model.corpse.angrygoose                     = creatures/fr/angrygoose/Pheasant_c
 model.corpse.angrygoose.butchered           = creatures/fr/butcheredgen/butcheredGeneric1.dae
 icon.model.creature.angrygoose              = creatures/fr/angrygoose/Icon_Pheasant.png
 
+# MegaGoose
+model.creature.megagoose                   = creatures/fr/angrygoose/Pheasant_main.dae?pheasantMat.texture=AngryGoose.png
+model.corpse.megagoose                     = creatures/fr/angrygoose/Pheasant_corpse.dae?pheasantMat.texture=AngryGoose.png
+model.corpse.megagoose.butchered           = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.megagoose              = creatures/fr/angrygoose/Icon_Pheasant.png
+
 #  Kraken ----------------------------------------------------------
 
 model.creature.kraken                       = creatures/fr/kraken/Octopus_main.dae?OctopusMat.texture=Kraken.png
@@ -60,3 +66,4 @@ model.creature.slime 			            = creatures/fr/slime/Blob_Main.dae?BlobMat.t
 model.corpse.slime  		                = creatures/fr/slime/Blob_corpse.dae?BlobMat.texture=slime.png
 model.corpse.slime.butchered  	            = creatures/fr/butcheredgen/butcheredGeneric1.dae
 icon.model.creature.slime                   = creatures/fr/slime/slime.png
+
