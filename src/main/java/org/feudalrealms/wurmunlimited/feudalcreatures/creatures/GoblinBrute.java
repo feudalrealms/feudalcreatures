@@ -60,13 +60,10 @@ public class GoblinBrute implements ModCreature, CreatureTypes, ItemMaterials, S
         builder.skill(SOUL_STRENGTH, 26.0F);
         builder.skill(SOUL_DEPTH, 7.0F);
         builder.skill(WEAPONLESS_FIGHTING, 50.0F);
+        builder.skill(FIGHT_AGGRESSIVESTYLE, 55.0F);
+        builder.skill(GROUP_FIGHTING, 40.0f);
         builder.leaderTemplateId(26);
         builder.alignment(-100.0F);
-        builder.baseCombatRating(40.0f);
-        builder.combatDamageType((byte) 2);
-        builder.maxGroupAttackSize(4);
-        builder.hasHands(true);
-        builder.maxPercentOfCreatures(0.04F);
         builder.handDamString("claw");
         builder.maxAge(100);
         builder.armourType(ArmourTemplate.ARMOUR_TYPE_PLATE);

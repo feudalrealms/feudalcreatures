@@ -8,6 +8,7 @@ import com.wurmonline.server.combat.CombatMove;
 import com.wurmonline.server.creatures.AttackAction;
 import com.wurmonline.server.creatures.AttackIdentifier;
 import com.wurmonline.server.creatures.AttackValues;
+import com.wurmonline.server.skills.SkillList;
 import com.wurmonline.shared.constants.CreatureTypes;
 import com.wurmonline.shared.constants.ItemMaterials;
 import com.wurmonline.shared.constants.SoundNames;
@@ -75,6 +76,7 @@ public class MegaGoose implements ModCreature, CreatureTypes, ItemMaterials, Sou
         builder.skill(SOUL_DEPTH, 7.0F);
         builder.skill(WEAPONLESS_FIGHTING, 75.0F);
         builder.skill(FIGHT_AGGRESSIVESTYLE, 55.0F);
+        builder.skill(GROUP_FIGHTING, 40.0f);
         builder.alignment(-90.0F);
         builder.combatDamageType(Wound.TYPE_BITE);
         builder.maxPercentOfCreatures(0.01F);
@@ -87,6 +89,8 @@ public class MegaGoose implements ModCreature, CreatureTypes, ItemMaterials, Sou
         builder.baseCombatRating(85.0f);
         builder.maxGroupAttackSize(20);
         builder.hasHands(false);
+        builder.glowing(true);
+        builder.usesNewAttacks(true);
         builder.setCombatMoves(new int[]{CombatMove.STUN,CombatMove.FIGHTAGG,CombatMove.STOMP});
         builder.addPrimaryAttack(new AttackAction("flap", AttackIdentifier.MAUL, new AttackValues(12.0F, 0.06F, 4.0F, 3, 1, (byte)0, false, 3, 1.4F)));
         builder.addSecondaryAttack(new AttackAction("kick", AttackIdentifier.KICK, new AttackValues(8.0F, 0.8F, 5.0F, 3, 1, (byte)0, false, 3, 2.1F)));

@@ -27,7 +27,19 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
 
     public CreatureTemplateBuilder createCreateTemplateBuilder() {
 
-        int[] types = { C_TYPE_MOVE_GLOBAL,C_TYPE_MONSTER,C_TYPE_AGG_HUMAN,C_TYPE_SWIMMING,C_TYPE_HUNTING,C_TYPE_CARNIVORE,C_TYPE_NON_NEWBIE,C_TYPE_STEALTH };
+        int[] types = {
+                C_MOD_LURKING,
+                C_MOD_GREENISH,
+                C_TYPE_HUNTING,
+                C_TYPE_MONSTER,
+                C_TYPE_CARNIVORE,
+                C_TYPE_CLIMBER,
+                C_TYPE_CAVEDWELLER,
+                C_TYPE_OPENDOORS,
+                C_TYPE_NON_NEWBIE,
+                C_TYPE_AGG_HUMAN,
+                C_TYPE_STEALTH
+        };
         final int[] itemsButchered = {meat,tallow,eye,bladder,heart};
 
 
@@ -51,7 +63,8 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
         builder.skill(SOUL_STRENGTH, 20.0F);
         builder.skill(SOUL_DEPTH, 20.0F);
         builder.skill(WEAPONLESS_FIGHTING, 50.0f);
-
+        builder.skill(FIGHT_AGGRESSIVESTYLE, 55.0F);
+        builder.skill(GROUP_FIGHTING, 40.0f);
         builder.leaderTemplateId(27);
         builder.alignment(-99.0F);
         builder.hasHands(true);
@@ -73,7 +86,7 @@ public class TrollWitchDoctor implements ModCreature, CreatureTypes, ItemMateria
         builder.addPrimaryAttack(new AttackAction("strike", AttackIdentifier.STRIKE, new AttackValues(7.0F, 0.04F, 4.0F, 3, 1, (byte)0, false, 3, 1.4F)));
         builder.addSecondaryAttack(new AttackAction("kick", AttackIdentifier.KICK, new AttackValues(4.0F, 0.04F, 5.0F, 3, 1, (byte)0, false, 3, 2.1F)));
         builder.addSecondaryAttack(new AttackAction("bite", AttackIdentifier.BITE, new AttackValues(10.0F, 0.08F, 7.0F, 3, 1, (byte)3, false, 3, 2.0F)));
-
+        builder.usesNewAttacks(true);
         LOGGER.info("Initiator: Troll Witchdoctor");
         return builder;
     }

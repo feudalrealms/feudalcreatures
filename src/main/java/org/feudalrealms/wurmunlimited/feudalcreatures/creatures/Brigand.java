@@ -65,6 +65,8 @@ public class Brigand implements ModCreature, CreatureTypes, ItemMaterials, Sound
         builder.skill(SOUL_STRENGTH, 46.0F);
         builder.skill(SOUL_DEPTH, 37.0F);
         builder.skill(WEAPONLESS_FIGHTING, 55.0F);
+        builder.skill(FIGHT_DEFENSIVESTYLE, 55.0F);
+        builder.skill(GROUP_FIGHTING, 40.0f);
         builder.alignment(-100.0F);
         builder.combatDamageType((byte) 1);
         builder.maxGroupAttackSize(4);
@@ -75,6 +77,7 @@ public class Brigand implements ModCreature, CreatureTypes, ItemMaterials, Sound
         builder.maxAge(100);
         builder.armourType(ArmourTemplate.ARMOUR_TYPE_PLATE);
         builder.baseCombatRating(50.0f);
+        builder.usesNewAttacks(true);
         builder.setCombatMoves(new int[]{CombatMove.FIGHTDEFEND, CombatMove.STUN, CombatMove.BASH});
         builder.addPrimaryAttack(new AttackAction("strike", AttackIdentifier.STRIKE, new AttackValues(15.0F, 0.04F, 4.0F, 3, 1, (byte)0, false, 3, 1.1F)));
         builder.addSecondaryAttack(new AttackAction("kick", AttackIdentifier.KICK, new AttackValues(15.0F, 0.04F, 5.0F, 3, 1, (byte)0, false, 3, 2.1F)));

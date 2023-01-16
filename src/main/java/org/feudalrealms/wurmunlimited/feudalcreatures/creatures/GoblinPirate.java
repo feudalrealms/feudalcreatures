@@ -62,6 +62,8 @@ public class GoblinPirate implements ModCreature, CreatureTypes, ItemMaterials, 
         builder.skill(SOUL_STRENGTH, 36.0F);
         builder.skill(SOUL_DEPTH, 37.0F);
         builder.skill(WEAPONLESS_FIGHTING, 45.0F);
+        builder.skill(FIGHT_DEFENSIVESTYLE, 55.0F);
+        builder.skill(GROUP_FIGHTING, 40.0f);
         builder.leaderTemplateId(26);
         builder.alignment(-100.0F);
         builder.baseCombatRating(40.0f);

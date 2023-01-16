@@ -60,6 +60,8 @@ public class Snapper implements ModCreature, CreatureTypes, ItemMaterials, Sound
         builder.skill(SOUL_STRENGTH, 26.0F);
         builder.skill(SOUL_DEPTH, 37.0F);
         builder.skill(WEAPONLESS_FIGHTING, 35.0F);
+        builder.skill(FIGHT_DEFENSIVESTYLE, 55.0F);
+        builder.skill(GROUP_FIGHTING, 40.0f);
         builder.alignment(-40.0F);
         builder.combatDamageType(Wound.TYPE_BITE);
         builder.maxPercentOfCreatures(0.02F);
