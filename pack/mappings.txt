@@ -67,3 +67,7 @@ model.corpse.slime  		                = creatures/fr/slime/Blob_corpse.dae?BlobM
 model.corpse.slime.butchered  	            = creatures/fr/butcheredgen/butcheredGeneric1.dae
 icon.model.creature.slime                   = creatures/fr/slime/slime.png
 
+# Red Gnome
+model.creature.redgnome 			        = creatures/fr/redgnome/redGnome_Main.dae
+model.corpse.redgnome.butchered  	        = creatures/fr/butcheredgen/butcheredGeneric1.dae
+icon.model.creature.redgnome                = creatures/fr/redgnome/Icon_redgnome.png
